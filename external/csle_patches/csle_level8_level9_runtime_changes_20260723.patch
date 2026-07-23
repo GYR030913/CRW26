@@ -1,0 +1,414 @@
+diff --git a/config.json b/config.json
+index e92ce04f2..b61948b86 100644
+--- a/config.json
++++ b/config.json
+@@ -25,25 +25,25 @@
+   "cadvisor_port": 8080,
+   "prometheus_port": 9090,
+   "pgadmin_port": 7778,
+-  "node_exporter_pid_file": "/var/log/csle/node_exporter.pid",
+-  "csle_mgmt_webapp_pid_file": "/var/log/csle/csle_mgmt_webapp.pid",
+-  "node_exporter_log_file": "/var/log/csle/node_exporter.log",
+-  "flask_log_file": "/var/log/csle/flask.log",
+-  "cluster_manager_log_file": "/var/log/csle/cluster_manager.log",
++  "node_exporter_pid_file": "/tmp/csle/node_exporter.pid",
++  "csle_mgmt_webapp_pid_file": "/tmp/csle/csle_mgmt_webapp.pid",
++  "node_exporter_log_file": "/tmp/csle/node_exporter.log",
++  "flask_log_file": "/tmp/csle/flask.log",
++  "cluster_manager_log_file": "/tmp/csle/cluster_manager.log",
+   "docker_stats_manager_log_file": "docker_stats_manager.log",
+-  "docker_stats_manager_log_dir": "/var/log/csle/",
++  "docker_stats_manager_log_dir": "/tmp/csle/",
+   "docker_stats_manager_port": 50051,
+   "docker_stats_manager_max_workers": 10,
+-  "docker_stats_manager_outfile": "/var/log/csle/statsmanager.out",
+-  "docker_stats_manager_pidfile": "/var/log/csle/statsmanager.pid",
+-  "prometheus_pid_file": "/var/log/csle/prometheus.pid",
+-  "prometheus_log_file": "/var/log/csle/prometheus.log",
++  "docker_stats_manager_outfile": "/tmp/csle/statsmanager.out",
++  "docker_stats_manager_pidfile": "/tmp/csle/statsmanager.pid",
++  "prometheus_pid_file": "/tmp/csle/prometheus.pid",
++  "prometheus_log_file": "/tmp/csle/prometheus.log",
+   "prometheus_config_file": "$CSLE_HOME/management-system/prometheus.yml",
+   "postgresql_log_dir": "/var/log/postgresql/",
+   "nginx_log_dir": "/var/log/nginx/",
+   "default_log_dir": "/tmp/csle/",
+   "metastore_ip": "127.0.0.1",
+-  "localhost": false,
++  "localhost": true,
+   "recovery_ai": false,
+   "recovery_ai_output_dir": "",
+   "recovery_ai_examples_path": "",
+@@ -53,21 +53,14 @@
+   "cluster_config": {
+     "cluster_nodes": [
+       {
+-        "ip": "172.31.212.92",
++        "ip": "10.128.0.8",
+         "leader": true,
+-        "cpus": 96,
+-        "gpus": 4,
+-        "RAM": 755
+-      },
+-      {
+-        "ip": "172.31.212.91",
+-        "leader": false,
+-        "cpus": 16,
+-        "gpus": 2,
+-        "RAM": 126
++        "cpus": 4,
++        "gpus": 0,
++        "RAM": 16
+       }
+     ]
+   },
+   "allow_registration": false,
+-  "version": "0.9.0"
++  "version": "0.10.0"
+ }
+diff --git a/emulation-system/envs/0.10.0/level_8/config.py b/emulation-system/envs/0.10.0/level_8/config.py
+index f017470af..2011d531f 100644
+--- a/emulation-system/envs/0.10.0/level_8/config.py
++++ b/emulation-system/envs/0.10.0/level_8/config.py
+@@ -1019,9 +1019,9 @@ def default_containers_config(network_id: int, level: int, version: str) -> Cont
+     ]
+     containers_cfg = ContainersConfig(
+         containers=containers,
+-        agent_ip=f"{constants.CSLE.CSLE_NETWORK_PREFIX}{network_id}."
++        agent_ip=f"{constants.CSLE.CSLE_SUBNETMASK_PREFIX}{network_id}."
+                  f"{collector_constants.EXTERNAL_NETWORK.NETWORK_ID_THIRD_OCTET}.191",
+-        router_ip=f"{constants.CSLE.CSLE_NETWORK_PREFIX}{network_id}.2.10",
++        router_ip=f"{constants.CSLE.CSLE_SUBNETMASK_PREFIX}{network_id}.2.10",
+         ids_enabled=True, vulnerable_nodes=[
+             f"{constants.CSLE.CSLE_SUBNETMASK_PREFIX}{network_id}.2.79",
+             f"{constants.CSLE.CSLE_SUBNETMASK_PREFIX}{network_id}.2.78",
+diff --git a/emulation-system/envs/0.10.0/level_9/config.py b/emulation-system/envs/0.10.0/level_9/config.py
+index 048343666..e3838be43 100644
+--- a/emulation-system/envs/0.10.0/level_9/config.py
++++ b/emulation-system/envs/0.10.0/level_9/config.py
+@@ -5182,11 +5182,11 @@ def default_static_attacker_sequences(subnet_masks: List[str]) -> Dict[str, List
+         EmulationAttackerNetworkServiceActions.SERVICE_LOGIN(index=-1),
+         EmulationAttackerShellActions.CVE_2010_0426_PRIV_ESC(index=11),
+         EmulationAttackerNMAPActions.PING_SCAN(index=-1, ips=subnet_masks),
+-        EmulationAttackerShellActions.DVWA_SQL_INJECTION(index=12),
++        EmulationAttackerShellActions.DVWA_SQL_INJECTION(index=10),
+         EmulationAttackerNetworkServiceActions.SERVICE_LOGIN(index=-1),
+         EmulationAttackerShellActions.INSTALL_TOOLS(index=-1),
+         EmulationAttackerNMAPActions.PING_SCAN(index=-1, ips=subnet_masks),
+-        EmulationAttackerShellActions.CVE_2015_1427_EXPLOIT(index=19),
++        EmulationAttackerShellActions.CVE_2015_1427_EXPLOIT(index=10),
+         EmulationAttackerNetworkServiceActions.SERVICE_LOGIN(index=-1),
+         EmulationAttackerShellActions.INSTALL_TOOLS(index=-1),
+         EmulationAttackerNMAPActions.PING_SCAN(index=-1, ips=subnet_masks)
+diff --git a/simulation-system/libs/csle-common/src/csle_common/constants/constants.py b/simulation-system/libs/csle-common/src/csle_common/constants/constants.py
+index 3d82c7720..b6ca4f86e 100644
+--- a/simulation-system/libs/csle-common/src/csle_common/constants/constants.py
++++ b/simulation-system/libs/csle-common/src/csle_common/constants/constants.py
+@@ -1660,7 +1660,7 @@ class METADATA_STORE:
+     DBNAME = "csle"
+     USER = "csle"
+     PASSWORD = "csle"
+-    HOST = "172.31.212.92"
++    HOST = "127.0.0.1"
+     TRACES_PROPERTY = "traces"
+     DB_NAME_PROPERTY = "dbname"
+     PW_PROPERTY = "password"
+diff --git a/simulation-system/libs/csle-common/src/csle_common/util/connection_util.py b/simulation-system/libs/csle-common/src/csle_common/util/connection_util.py
+index 8cc616ffa..853838795 100644
+--- a/simulation-system/libs/csle-common/src/csle_common/util/connection_util.py
++++ b/simulation-system/libs/csle-common/src/csle_common/util/connection_util.py
+@@ -1,5 +1,6 @@
+ from typing import Tuple, List, Any
+ import time
++from datetime import datetime
+ import paramiko
+ import telnetlib
+ from ftplib import FTP
+@@ -406,39 +407,105 @@ class ConnectionUtil:
+             for cr in credentials:
+                 for ip in a.ips:
+                     if cr.service == constants.TELNET.SERVICE_NAME:
+-                        try:
+-                            forward_port = s.emulation_env_config.get_port_forward_port()
+-                            agent_transport = proxy_conn.conn.get_transport()
+-                            tunnel_thread = ForwardTunnelThread(local_port=forward_port,
+-                                                                remote_host=ip, remote_port=cr.port,
+-                                                                transport=agent_transport)
+-                            tunnel_thread.start()
+-                            target_conn = telnetlib.Telnet(host=constants.TELNET.LOCALHOST, port=forward_port,
+-                                                           timeout=3)
+-                            target_conn.read_until(constants.TELNET.LOGIN_PROMPT, timeout=3)
+-                            target_conn.write((cr.username + "\n").encode())
+-                            target_conn.read_until(constants.TELNET.PASSWORD_PROMPT, timeout=3)
+-                            target_conn.write((cr.pw + "\n").encode())
+-                            response = target_conn.read_until(constants.TELNET.PROMPT, timeout=3)
+-                            response_1 = response.decode()
+-                            if constants.TELNET.INCORRECT_LOGIN not in response_1 and response_1 != "":
+-                                connected = True
+-                                credentials.append(cr)
+-                                target_connections.append(target_conn)
+-                                proxies.append(proxy_conn)
+-                                tunnel_threads.append(tunnel_thread)
+-                                forward_ports.append(forward_port)
+-                                ports.append(cr.port)
+-                                ip = ip
+-                                non_failed_credentials.append(cr)
+-                            break
+-                        except Exception as e:
+-                            Logger.__call__().get_logger().warning(f"telnet exception:{str(e)}, {repr(e)}")
+-                            if s.attacker_obs_state is not None:
+-                                Logger.__call__().get_logger().warning(
+-                                    f"Target ip in agent reachable: {s.attacker_obs_state.agent_reachable}")
+-                                Logger.__call__().get_logger().warning(
+-                                    f"Agent reachable:{s.attacker_obs_state.agent_reachable}")
++                        telnet_login_timeout = 8
++                        for telnet_attempt in range(constants.ENV_CONSTANTS.ATTACKER_RETRY_CHECK_ROOT):
++                            target_conn = None
++                            tunnel_thread = None
++                            try:
++                                forward_port = s.emulation_env_config.get_port_forward_port()
++                                agent_transport = proxy_conn.conn.get_transport()
++                                tunnel_thread = ForwardTunnelThread(local_port=forward_port,
++                                                                    remote_host=ip, remote_port=cr.port,
++                                                                    transport=agent_transport)
++                                tunnel_thread.start()
++                                target_conn = telnetlib.Telnet(host=constants.TELNET.LOCALHOST, port=forward_port,
++                                                               timeout=telnet_login_timeout)
++                                login_response = target_conn.read_until(b"login:", timeout=telnet_login_timeout)
++                                target_conn.write((cr.username + "\n").encode())
++                                password_response = target_conn.read_until(b"Password:", timeout=telnet_login_timeout)
++                                target_conn.write((cr.pw + "\n").encode())
++                                response = target_conn.read_until(constants.TELNET.PROMPT,
++                                                                  timeout=telnet_login_timeout)
++                                response_1 = response.decode()
++                                telnet_connected = constants.TELNET.INCORRECT_LOGIN not in response_1 \
++                                    and constants.TELNET.PROMPT in response
++                                with open(
++                                        "/home/yu3194924316/llm-recovery-dt/experiments/csle_level9_dt/artifacts/"
++                                        "csle_telnet_setup_debug.log", "a", encoding="utf-8") as debug_file:
++                                    debug_file.write(
++                                        "\n=== CSLE TELNET SETUP DEBUG ===\n"
++                                        f"time={datetime.utcnow().isoformat()}Z\n"
++                                        f"attempt={telnet_attempt + 1}\n"
++                                        f"proxy_ip={proxy_conn.ip}\n"
++                                        f"target_ip={ip}\n"
++                                        f"username={cr.username}\n"
++                                        f"port={cr.port}\n"
++                                        f"login_prompt_seen={b'login:' in login_response}\n"
++                                        f"password_prompt_seen={b'Password:' in password_response}\n"
++                                        f"shell_prompt_seen={constants.TELNET.PROMPT in response}\n"
++                                        f"incorrect_login_seen={constants.TELNET.INCORRECT_LOGIN in response_1}\n"
++                                        f"connected={telnet_connected}\n"
++                                        "login_response_begin\n"
++                                        f"{login_response.decode('utf-8', 'replace')}\n"
++                                        "login_response_end\n"
++                                        "password_response_begin\n"
++                                        f"{password_response.decode('utf-8', 'replace')}\n"
++                                        "password_response_end\n"
++                                        "post_password_response_begin\n"
++                                        f"{response.decode('utf-8', 'replace')}\n"
++                                        "post_password_response_end\n")
++                                if telnet_connected:
++                                    connected = True
++                                    credentials.append(cr)
++                                    target_connections.append(target_conn)
++                                    proxies.append(proxy_conn)
++                                    tunnel_threads.append(tunnel_thread)
++                                    forward_ports.append(forward_port)
++                                    ports.append(cr.port)
++                                    ip = ip
++                                    non_failed_credentials.append(cr)
++                                    break
++                                try:
++                                    target_conn.close()
++                                except Exception:
++                                    pass
++                                if tunnel_thread is not None:
++                                    try:
++                                        tunnel_thread.forward_server.shutdown()
++                                    except Exception:
++                                        pass
++                                time.sleep(constants.ENV_CONSTANTS.SLEEP_RETRY)
++                            except Exception as e:
++                                Logger.__call__().get_logger().warning(f"telnet exception:{str(e)}, {repr(e)}")
++                                with open(
++                                        "/home/yu3194924316/llm-recovery-dt/experiments/csle_level9_dt/artifacts/"
++                                        "csle_telnet_setup_debug.log", "a", encoding="utf-8") as debug_file:
++                                    debug_file.write(
++                                        "\n=== CSLE TELNET SETUP DEBUG EXCEPTION ===\n"
++                                        f"time={datetime.utcnow().isoformat()}Z\n"
++                                        f"attempt={telnet_attempt + 1}\n"
++                                        f"target_ip={ip}\n"
++                                        f"username={cr.username}\n"
++                                        f"port={cr.port}\n"
++                                        f"exception={repr(e)}\n")
++                                if target_conn is not None:
++                                    try:
++                                        target_conn.close()
++                                    except Exception:
++                                        pass
++                                if tunnel_thread is not None:
++                                    try:
++                                        tunnel_thread.forward_server.shutdown()
++                                    except Exception:
++                                        pass
++                                if s.attacker_obs_state is not None:
++                                    Logger.__call__().get_logger().warning(
++                                        f"Target ip in agent reachable: {s.attacker_obs_state.agent_reachable}")
++                                    Logger.__call__().get_logger().warning(
++                                        f"Agent reachable:{s.attacker_obs_state.agent_reachable}")
++                            if connected:
++                                break
++                        break
+                     else:
+                         non_failed_credentials.append(cr)
+                 if connected:
+@@ -466,25 +533,71 @@ class ConnectionUtil:
+         """
+         start = time.time()
+         root = False
+-        for i in range(constants.ENV_CONSTANTS.ATTACKER_RETRY_CHECK_ROOT):
+-            connection_setup_dto.target_connections[i].write("sudo -l\n".encode())
+-            response = connection_setup_dto.target_connections[i].read_until(constants.TELNET.PROMPT, timeout=3)
++        connection_idx = i
++        if connection_idx >= len(connection_setup_dto.target_connections) \
++                or connection_idx >= len(connection_setup_dto.credentials) \
++                or connection_idx >= len(connection_setup_dto.tunnel_threads) \
++                or connection_idx >= len(connection_setup_dto.forward_ports) \
++                or connection_idx >= len(connection_setup_dto.ports) \
++                or connection_idx >= len(connection_setup_dto.proxies):
++            Logger.__call__().get_logger().warning(
++                f"Could not finalize telnet connection, index: {connection_idx}, "
++                f"connections: {len(connection_setup_dto.target_connections)}, "
++                f"credentials: {len(connection_setup_dto.credentials)}, "
++                f"tunnel_threads: {len(connection_setup_dto.tunnel_threads)}, "
++                f"forward_ports: {len(connection_setup_dto.forward_ports)}, "
++                f"ports: {len(connection_setup_dto.ports)}, proxies: {len(connection_setup_dto.proxies)}")
++            return False, time.time() - start
++        for _ in range(constants.ENV_CONSTANTS.ATTACKER_RETRY_CHECK_ROOT):
++            sudo_start_marker = "__CSLE_SUDO_START__"
++            sudo_end_marker = "__CSLE_SUDO_END__"
++            connection_setup_dto.target_connections[connection_idx].read_very_eager()
++            connection_setup_dto.target_connections[connection_idx].write(
++                "csle_marker_prefix=__CSLE_SUDO_; "
++                "csle_marker_start=START__; "
++                "csle_marker_end=END__; "
++                "printf '%s%s\\n' \"$csle_marker_prefix\" \"$csle_marker_start\"; "
++                "sudo -n -l; "
++                "printf '%s%s\\n' \"$csle_marker_prefix\" \"$csle_marker_end\"\n".encode())
++            response = connection_setup_dto.target_connections[connection_idx].read_until(
++                sudo_end_marker.encode(), timeout=3)
+             root = False
+-            if f"{connection_setup_dto.credentials[i].username} may not run sudo" not in response.decode("utf-8") \
+-                    and ("(ALL) NOPASSWD: ALL" in response.decode("utf-8") or
+-                         "(ALL : ALL) ALL" in response.decode("utf-8")):
++            response_str = response.decode("utf-8")
++            raw_response_str = response_str
++            if sudo_start_marker in response_str and sudo_end_marker in response_str:
++                response_str = response_str.split(sudo_start_marker, 1)[1].split(sudo_end_marker, 1)[0]
++            if f"{connection_setup_dto.credentials[connection_idx].username} may not run sudo" not in response_str \
++                    and ("(ALL) NOPASSWD: ALL" in response_str or "(ALL : ALL) ALL" in response_str):
+                 root = True
++            with open("/tmp/csle_telnet_sudo_debug.log", "a", encoding="utf-8") as debug_file:
++                debug_file.write(
++                    "\n=== CSLE TELNET SUDO DEBUG ===\n"
++                    f"time={datetime.utcnow().isoformat()}Z\n"
++                    f"connection_idx={connection_idx}\n"
++                    f"username={connection_setup_dto.credentials[connection_idx].username}\n"
++                    f"target_ip={connection_setup_dto.ip}\n"
++                    f"start_marker_present={sudo_start_marker in raw_response_str}\n"
++                    f"end_marker_present={sudo_end_marker in raw_response_str}\n"
++                    f"root={root}\n"
++                    "raw_response_begin\n"
++                    f"{raw_response_str}\n"
++                    "raw_response_end\n"
++                    "parsed_response_begin\n"
++                    f"{response_str}\n"
++                    "parsed_response_end\n")
++            if root:
+                 break
+-            else:
+-                time.sleep(constants.ENV_CONSTANTS.SLEEP_RETRY)
+-        connection_dto = EmulationConnectionObservationState(conn=connection_setup_dto.target_connections[i],
+-                                                             credential=connection_setup_dto.credentials[i],
++            time.sleep(constants.ENV_CONSTANTS.SLEEP_RETRY)
++        connection_dto = EmulationConnectionObservationState(conn=connection_setup_dto.target_connections[connection_idx],
++                                                             credential=connection_setup_dto.credentials[connection_idx],
+                                                              root=root,
+                                                              service=constants.TELNET.SERVICE_NAME,
+-                                                             tunnel_thread=connection_setup_dto.tunnel_threads[i],
+-                                                             tunnel_port=connection_setup_dto.forward_ports[i],
+-                                                             port=connection_setup_dto.ports[i],
+-                                                             proxy=connection_setup_dto.proxies[i],
++                                                             tunnel_thread=connection_setup_dto.tunnel_threads[
++                                                                 connection_idx],
++                                                             tunnel_port=connection_setup_dto.forward_ports[
++                                                                 connection_idx],
++                                                             port=connection_setup_dto.ports[connection_idx],
++                                                             proxy=connection_setup_dto.proxies[connection_idx],
+                                                              ip=connection_setup_dto.ip)
+         target_machine.telnet_connections.append(connection_dto)
+         end = time.time()
+@@ -624,6 +737,9 @@ class ConnectionUtil:
+         """
+         if s.attacker_obs_state is None or s.attacker_obs_state.agent_reachable is None:
+             raise ValueError("EmulationAttackerObservationState or agent_reachable is None")
++        debug_path = "/tmp/csle_jump_host_debug.log"
++        with open(debug_path, "a", encoding="utf-8") as debug_file:
++            debug_file.write(f"\n=== find_jump_host_connection target={ip} ===\n")
+         if ip in s.attacker_obs_state.agent_reachable:
+             cr = Credential(
+                 username=constants.AGENT.USER, pw=constants.AGENT.PW, root=True,
+@@ -638,6 +754,13 @@ class ConnectionUtil:
+         for m in s.attacker_obs_state.machines:
+             err_str = err_str + (f"ips: {m.ips}, logged in: {m.logged_in}, tools installed: {m.tools_installed}, "
+                                  f"reachable: {m.reachable} \n")
++            with open(debug_path, "a", encoding="utf-8") as debug_file:
++                debug_file.write(
++                    f"candidate ips={m.ips} logged_in={m.logged_in} root={m.root} "
++                    f"tools_installed={m.tools_installed} backdoor_installed={m.backdoor_installed} "
++                    f"target_reachable={ip in m.reachable} ssh_connections={len(m.ssh_connections)} "
++                    f"backdoor_credentials={[c.username for c in m.backdoor_credentials]}\n"
++                )
+             if m.logged_in and m.tools_installed and m.backdoor_installed and ip in m.reachable:
+ 
+                 # Start with ssh connections
+@@ -649,8 +772,38 @@ class ConnectionUtil:
+ 
+                 for c in ssh_connections_sorted_by_root:
+                     alive = ConnectionUtil.test_connection(c)
++                    with open(debug_path, "a", encoding="utf-8") as debug_file:
++                        debug_file.write(
++                            f"  ssh_connection ip={c.ip} user={c.credential.username} root={c.root} "
++                            f"service={c.service} alive={alive}\n"
++                        )
+                     if alive:
++                        with open(debug_path, "a", encoding="utf-8") as debug_file:
++                            debug_file.write(
++                                f"  selected_jump_host ip={c.ip} user={c.credential.username}\n"
++                            )
+                         return c
++                    try:
++                        c = ConnectionUtil.reconnect_ssh(c=c)
++                        alive_after_reconnect = ConnectionUtil.test_connection(c)
++                        with open(debug_path, "a", encoding="utf-8") as debug_file:
++                            debug_file.write(
++                                f"  reconnect_ssh ip={c.ip} user={c.credential.username} "
++                                f"alive={alive_after_reconnect}\n"
++                            )
++                        if alive_after_reconnect:
++                            with open(debug_path, "a", encoding="utf-8") as debug_file:
++                                debug_file.write(
++                                    f"  selected_jump_host_after_reconnect ip={c.ip} "
++                                    f"user={c.credential.username}\n"
++                                )
++                            return c
++                    except Exception as e:
++                        with open(debug_path, "a", encoding="utf-8") as debug_file:
++                            debug_file.write(
++                                f"  reconnect_ssh_failed ip={c.ip} user={c.credential.username} "
++                                f"error={repr(e)}\n"
++                            )
+         raise ValueError(f"No JumpHost found for ip: {ip}, topology: {err_str}")
+ 
+     @staticmethod

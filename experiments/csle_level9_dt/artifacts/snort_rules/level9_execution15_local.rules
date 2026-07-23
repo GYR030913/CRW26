@@ -1,0 +1,42 @@
+# CSLE level9 experienced attack local rules for execution 15.
+# These rule messages intentionally follow the high-severity ET/Snort style
+# observed in the CSLE-IncidentResponse-V1 fine-tuning dataset.
+
+alert icmp any any -> 15.9.0.0/16 any (msg:"ET SCAN ICMP Host Discovery Activity"; classtype:attempted-recon; sid:9100001; rev:1;)
+
+alert tcp any any -> 15.9.2.78 22 (msg:"ET POLICY SSH Connection Attempt Against Level9 SSH Server"; flags:S; classtype:attempted-user; sid:9100002; rev:2;)
+alert tcp any any -> 15.9.2.78 22 (msg:"ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server"; flags:S; threshold:type threshold, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:9100003; rev:1;)
+alert tcp any any -> 15.9.2.178 22 (msg:"ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server"; flags:S; classtype:attempted-user; sid:9100019; rev:1;)
+alert tcp any any -> 15.9.2.178 22 (msg:"ET POLICY SSH Brute Force Login Attempt Against Level9 Secondary SSH Server"; flags:S; threshold:type threshold, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:9100020; rev:1;)
+alert tcp any any -> 15.9.2.3 22 (msg:"ET TROJAN SSH Backdoor Login To Level9 Samba Host"; flags:S; classtype:trojan-activity; sid:9100021; rev:1;)
+alert tcp any any -> 15.9.2.3 23 (msg:"ET POLICY Telnet Connection Attempt Against Level9 Samba Host"; flags:S; classtype:attempted-user; sid:9100022; rev:1;)
+alert tcp any any -> 15.9.2.3 23 (msg:"ET POLICY Telnet Brute Force Login Attempt Against Level9 Samba Host"; flags:S; threshold:type threshold, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:9100023; rev:1;)
+
+alert tcp any any -> 15.9.2.3 445 (msg:"ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server"; classtype:attempted-admin; sid:9100004; rev:1;)
+alert tcp any any -> 15.9.2.3 445 (msg:"ET POLICY SMB Traffic To Level9 Samba Server"; classtype:protocol-command-decode; sid:9100005; rev:1;)
+alert tcp any any -> 15.9.2.3 139 (msg:"ET POLICY SMB NetBIOS Traffic To Level9 Samba Server"; classtype:protocol-command-decode; sid:9100006; rev:1;)
+alert tcp any any -> 15.9.6.7 445 (msg:"ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Deep Samba Server"; classtype:attempted-admin; sid:9100024; rev:1;)
+alert tcp any any -> 15.9.6.7 445 (msg:"ET POLICY SMB Traffic To Level9 Deep Samba Server"; classtype:protocol-command-decode; sid:9100025; rev:1;)
+alert tcp any any -> 15.9.6.7 139 (msg:"ET POLICY SMB NetBIOS Traffic To Level9 Deep Samba Server"; classtype:protocol-command-decode; sid:9100026; rev:1;)
+alert tcp any any -> 15.9.6.7 22 (msg:"ET TROJAN SSH Backdoor Login To Level9 Deep Samba Host"; flags:S; classtype:trojan-activity; sid:9100027; rev:1;)
+
+alert tcp any any -> 15.9.2.79 21 (msg:"ET POLICY FTP Connection Attempt Against Level9 FTP Server"; flags:S; classtype:attempted-user; sid:9100028; rev:1;)
+alert tcp any any -> 15.9.2.79 21 (msg:"ET POLICY FTP Brute Force Login Attempt Against Level9 FTP Server"; flags:S; threshold:type threshold, track by_src, count 5, seconds 60; classtype:attempted-admin; sid:9100029; rev:1;)
+alert tcp any any -> 15.9.2.79 80 (msg:"ET WEB_SERVER Shellshock Exploit Attempt Against Level9 Web Server"; content:"() {"; nocase; classtype:web-application-attack; sid:9100030; rev:1;)
+alert tcp any any -> 15.9.2.79 80 (msg:"ET WEB_SERVER HTTP Traffic To Level9 Shellshock Target"; flags:S; classtype:web-application-activity; sid:9100031; rev:1;)
+alert tcp any any -> 15.9.2.79 22 (msg:"ET TROJAN SSH Backdoor Login To Level9 Shellshock Target"; flags:S; classtype:trojan-activity; sid:9100032; rev:1;)
+alert tcp any any -> 15.9.2.178 22 (msg:"ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity"; flags:S; classtype:attempted-admin; sid:9100033; rev:1;)
+
+alert tcp any any -> 15.9.4.74 80 (msg:"ET WEB_SERVER DVWA SQL Injection Attempt Against Level9 Web Server"; content:"union"; nocase; classtype:web-application-attack; sid:9100007; rev:1;)
+alert tcp 15.9.4.74 80 -> any any (msg:"ET POLICY Possible Credential Disclosure From Level9 DVWA SQL Injection"; content:"admin:"; nocase; classtype:policy-violation; sid:9100008; rev:2;)
+alert tcp any any -> 15.9.4.74 80 (msg:"ET WEB_SERVER DVWA Login Attempt Against Level9 Web Server"; content:"POST /login.php"; nocase; classtype:web-application-activity; sid:9100011; rev:1;)
+alert tcp any any -> 15.9.4.74 80 (msg:"ET WEB_SERVER DVWA Authenticated Session Request Against Level9 Web Server"; content:"POST /index.php"; nocase; classtype:web-application-activity; sid:9100012; rev:1;)
+alert tcp any any -> 15.9.4.74 80 (msg:"ET WEB_SERVER DVWA SQL Injection Page Access Against Level9 Web Server"; content:"/vulnerabilities/sqli/"; nocase; classtype:web-application-activity; sid:9100013; rev:1;)
+alert tcp 15.9.4.74 80 -> any any (msg:"ET WEB_SERVER DVWA Successful HTTP Response During Level9 SQL Injection"; content:"HTTP/1.1 200 OK"; nocase; content:"Damn Vulnerable Web Application"; nocase; classtype:web-application-activity; sid:9100014; rev:1;)
+alert tcp any any -> 15.9.4.74 22 (msg:"ET TROJAN SSH Backdoor Login To Level9 DVWA Host After SQL Injection"; flags:S; classtype:trojan-activity; sid:9100015; rev:2;)
+
+alert tcp any any -> 15.9.5.62 9200 (msg:"ET EXPLOIT Elasticsearch Groovy Sandbox Escape CVE-2015-1427 Attempt"; classtype:attempted-admin; sid:9100009; rev:2;)
+alert tcp any any -> 15.9.5.62 9200 (msg:"ET TROJAN Possible Reverse Shell Or Backdoor Activity After Elasticsearch Exploitation"; classtype:trojan-activity; sid:9100010; rev:1;)
+alert tcp any any -> 15.9.5.62 9200 (msg:"ET POLICY Elasticsearch Service Access Attempt Against Level9 CVE-2015-1427 Host"; flags:S; classtype:web-application-activity; sid:9100016; rev:1;)
+alert tcp 15.9.5.62 9200 -> any any (msg:"ET POLICY Elasticsearch Service Reset During Level9 CVE-2015-1427 Attempt"; flags:RA; classtype:misc-activity; sid:9100017; rev:1;)
+alert tcp any any -> 15.9.5.62 22 (msg:"ET TROJAN SSH Backdoor Login To Level9 Elasticsearch Host After CVE-2015-1427"; flags:S; classtype:trojan-activity; sid:9100018; rev:2;)

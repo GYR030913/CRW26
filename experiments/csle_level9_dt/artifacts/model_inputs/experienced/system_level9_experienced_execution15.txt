@@ -1,0 +1,74 @@
+The testbed is CSLE level9, a Dockerized cyber range used as the executable digital-twin environment for incident response evaluation. The environment is a segmented enterprise-style network with an attacker/client edge network, multiple internal service networks, a management/monitoring network, vulnerable service hosts, honeypot/decoy hosts, and IDS monitoring.
+
+This System description is written for the DT execution environment. The DT execution id is 16, and its host addresses use the 16.9.x.x address space. Container names end with -level9-16.
+
+Emulation: csle-level9-0.10.0
+DT execution id: 16
+
+Network architecture:
+- 16.9.1.0/24 is the attacker/client edge network. It contains the attacker platform at 16.9.1.191, a client node at 16.9.1.254, and the router interface at 16.9.1.10.
+- 16.9.2.0/24 is the first internal target network behind the router. It contains the router interface at 16.9.2.10, Samba at 16.9.2.3, SSH at 16.9.2.78, FTP/Tomcat/Mongo at 16.9.2.79, CVE-2015-3306 at 16.9.2.178, and several honeypot/decoy hosts.
+- 16.9.3.0/24 contains the secondary interface of the SSH host at 16.9.3.78 and a Shellshock host at 16.9.3.54.
+- 16.9.4.0/24 is an internal service network. It contains the secondary interface of the Samba host at 16.9.4.3, the DVWA/SQL injection host at 16.9.4.74, and a CVE-2010-0426 host at 16.9.4.61.
+- 16.9.5.0/24 is an internal service network. It contains the secondary interface of the DVWA/SQL injection host at 16.9.5.74, the Elasticsearch CVE-2015-1427 host at 16.9.5.62, and a honeypot/decoy host at 16.9.5.101.
+- 16.9.6.0/24 is an internal service network. It contains another interface of the Elasticsearch CVE-2015-1427 host at 16.9.6.62 and a Samba host at 16.9.6.7.
+- 16.9.7.0/24 is an internal service and decoy network. It contains another interface of the Elasticsearch CVE-2015-1427 host at 16.9.7.62 and several honeypot/decoy hosts.
+- 16.9.8.0/24 contains vulnerable and decoy hosts, including CVE-2016-10033 at 16.9.8.24, CVE-2015-5602 at 16.9.8.25, and several honeypot/decoy hosts.
+- 16.9.9.0/24 contains Shellshock and honeypot/decoy hosts, including the Shellshock host at 16.9.9.54.
+- 16.9.253.0/24 is the management and monitoring network. Most containers have a management IP in this subnet. Kafka is 16.9.253.253 and ELK is 16.9.253.252.
+
+Infrastructure and monitoring hosts:
+- csle_hacker_kali_1_1-level9-16: attacker platform. IPs: 16.9.1.191, 16.9.253.191. This host contains common offensive and network testing tools.
+- csle_client_1_1-level9-16: client node. IPs: 16.9.1.254, 16.9.253.254.
+- csle_router_2_1-level9-16: router and native IDS sensor. IPs: 16.9.1.10, 16.9.2.10, 16.9.253.10. It connects the edge network to the first internal target network and runs Snort IDS.
+- csle_kafka_1_1-level9-16: Kafka monitoring host. IP: 16.9.253.253.
+- csle_elk_1_1-level9-16: ELK monitoring host. IP: 16.9.253.252.
+
+Vulnerable service hosts:
+- csle_samba_2_1-level9-16: Samba/Telnet/SSH host. IPs: 16.9.2.3, 16.9.4.3, 16.9.253.3. Services include SMB/Samba on TCP 445, Telnet on TCP 23, SSH on TCP 22, and NTP.
+- csle_samba_1_1-level9-16: Samba/SSH host. IPs: 16.9.6.7, 16.9.253.7. Services include SMB/Samba on TCP 445 and SSH on TCP 22.
+- csle_ssh_1_1-level9-16: SSH/DNS/HTTP host. IPs: 16.9.2.78, 16.9.3.78, 16.9.253.78. Services include SSH on TCP 22, DNS, and HTTP.
+- csle_ftp_1_1-level9-16: FTP/Tomcat/Mongo host. IPs: 16.9.2.79, 16.9.253.79. Services include FTP on TCP 21, SSH on TCP 22, Tomcat, Mongo, and TeamSpeak3.
+- csle_sql_injection_1_1-level9-16: DVWA / SQL injection web host. IPs: 16.9.4.74, 16.9.5.74, 16.9.253.74. Services include HTTP/DVWA on TCP 80, SSH on TCP 22, and IRC.
+- csle_cve_2015_1427_1_1-level9-16: Elasticsearch host. IPs: 16.9.5.62, 16.9.6.62, 16.9.7.62, 16.9.253.62. Services include Elasticsearch on TCP 9200, SSH on TCP 22, and SNMP.
+- csle_shellshock_1_1-level9-16: Shellshock web host. IPs: 16.9.3.54, 16.9.9.54, 16.9.253.54. Services include HTTP on TCP 80, SSH on TCP 22, and SNMP.
+- csle_cve_2010_0426_1_1-level9-16: CVE-2010-0426 host. IPs: 16.9.4.61, 16.9.8.61, 16.9.253.61. Services include SSH, TeamSpeak3, and Tomcat.
+- csle_cve_2015_3306_1_1-level9-16: CVE-2015-3306 host. IPs: 16.9.2.178, 16.9.253.178. Services include SSH, SNMP, and the vulnerable service.
+- csle_cve_2016_10033_1_1-level9-16: CVE-2016-10033 host. IPs: 16.9.8.24, 16.9.253.24.
+- csle_cve_2015_5602_1_1-level9-16: CVE-2015-5602 host. IPs: 16.9.8.25, 16.9.253.25.
+
+Multi-homed host identity:
+- Some CSLE level9 containers are connected to more than one Docker network. A multi-homed host therefore has multiple IP addresses, but those IPs represent interfaces of the same container and the same underlying machine.
+- csle_hacker_kali_1_1-level9-16 has interfaces 16.9.1.191 and 16.9.253.191.
+- csle_client_1_1-level9-16 has interfaces 16.9.1.254 and 16.9.253.254.
+- csle_router_2_1-level9-16 has interfaces 16.9.1.10, 16.9.2.10, and 16.9.253.10.
+- csle_samba_2_1-level9-16 has interfaces 16.9.2.3, 16.9.4.3, and 16.9.253.3.
+- csle_samba_1_1-level9-16 has interfaces 16.9.6.7 and 16.9.253.7.
+- csle_ssh_1_1-level9-16 has interfaces 16.9.2.78, 16.9.3.78, and 16.9.253.78.
+- csle_ftp_1_1-level9-16 has interfaces 16.9.2.79 and 16.9.253.79.
+- csle_sql_injection_1_1-level9-16 has interfaces 16.9.4.74, 16.9.5.74, and 16.9.253.74.
+- csle_cve_2015_1427_1_1-level9-16 has interfaces 16.9.5.62, 16.9.6.62, 16.9.7.62, and 16.9.253.62.
+- csle_shellshock_1_1-level9-16 has interfaces 16.9.3.54, 16.9.9.54, and 16.9.253.54.
+- csle_cve_2010_0426_1_1-level9-16 has interfaces 16.9.4.61, 16.9.8.61, and 16.9.253.61.
+- csle_cve_2015_3306_1_1-level9-16 has interfaces 16.9.2.178 and 16.9.253.178.
+- csle_cve_2016_10033_1_1-level9-16 has interfaces 16.9.8.24 and 16.9.253.24.
+- csle_cve_2015_5602_1_1-level9-16 has interfaces 16.9.8.25 and 16.9.253.25.
+
+Honeypot and decoy hosts:
+- 16.9.2.4, 16.9.2.5, 16.9.2.6, 16.9.2.8, 16.9.2.9, and 16.9.2.21 are honeypot/decoy hosts in the first internal target network.
+- 16.9.5.101 and 16.9.7.101 are multi-homed honeypot/decoy hosts.
+- 16.9.7.15, 16.9.7.16, 16.9.7.17, and 16.9.7.18 are honeypot/decoy hosts in 16.9.7.0/24.
+- 16.9.8.19, 16.9.8.20, 16.9.8.22, and 16.9.8.23 are honeypot/decoy hosts in 16.9.8.0/24.
+- 16.9.9.11, 16.9.9.12, 16.9.9.13, and 16.9.9.14 are honeypot/decoy hosts in 16.9.9.0/24.
+
+Observed Docker networks:
+- csle_net_9_1_16 maps to 16.9.1.0/24.
+- csle_net_9_2_16 maps to 16.9.2.0/24.
+- csle_net_9_3_16 maps to 16.9.3.0/24.
+- csle_net_9_4_16 maps to 16.9.4.0/24.
+- csle_net_9_5_16 maps to 16.9.5.0/24.
+- csle_net_9_6_16 maps to 16.9.6.0/24.
+- csle_net_9_7_16 maps to 16.9.7.0/24.
+- csle_net_9_8_16 maps to 16.9.8.0/24.
+- csle_net_9_9_16 maps to 16.9.9.0/24.
+- csle_net_9_253_16 maps to 16.9.253.0/24.

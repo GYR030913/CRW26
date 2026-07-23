@@ -1,0 +1,40 @@
+The experiment uses CSLE level9 as a Dockerized cyber range.
+There are two isomorphic executions: true CSLE execution 15 and DT execution 16.
+This System file describes true CSLE execution 15, where the experienced attack was executed.
+
+Emulation: experiments/csle_level9_dt/artifacts/level9_15_experienced_20260713T141523Z.json
+Execution id: 15
+Attack sequence: experienced
+
+IP convention:
+- True CSLE uses 15.9.x.x.
+- DT uses 16.9.x.x.
+- For model reasoning and comparison, both should be normalized to X.9.x.x.
+
+Important hosts:
+- csle_elk_1_1-level9-15: ELK monitoring host; IPs: 15.9.253.252
+- csle_kafka_1_1-level9-15: Kafka monitoring host; IPs: 15.9.253.253
+- csle_cve_2015_1427_1_1-level9-15: Elasticsearch CVE-2015-1427 vulnerable host; IPs: 15.9.253.62, 15.9.5.62, 15.9.6.62, 15.9.7.62
+- csle_sql_injection_1_1-level9-15: DVWA / SQL injection vulnerable host; IPs: 15.9.253.74, 15.9.4.74, 15.9.5.74
+- csle_samba_2_1-level9-15: Samba vulnerable host; IPs: 15.9.253.3, 15.9.2.3, 15.9.4.3
+- csle_ssh_1_1-level9-15: SSH vulnerable host; IPs: 15.9.253.78, 15.9.2.78, 15.9.3.78
+- csle_router_2_1-level9-15: router / IDS sensor; IPs: 15.9.1.10, 15.9.253.10, 15.9.2.10
+- csle_hacker_kali_1_1-level9-15: attacker host; IPs: 15.9.1.191, 15.9.253.191
+
+Observed Docker networks:
+- csle_net_9_1_15
+- csle_net_9_253_15
+- csle_net_9_2_15
+- csle_net_9_3_15
+- csle_net_9_4_15
+- csle_net_9_5_15
+- csle_net_9_6_15
+- csle_net_9_7_15
+- csle_net_9_8_15
+- csle_net_9_9_15
+
+The router host acts as the main network IDS sensor. In execution 15, Snort alerts were collected from:
+- container: csle_router_2_1-level9-15
+- files: /var/snort/alert.csv and /var/log/alert.csv
+
+The task is to infer the experienced attack sequence, tactics, techniques, affected hosts, and confidence from the collected attacker outputs, host state, service state, and IDS alerts.

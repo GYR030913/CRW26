@@ -1,0 +1,45 @@
+Compressed IDS alerts:
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:51844 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:51844 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:51854 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:51854 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:39,048 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:54382 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,327 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:50355 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,351 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49020 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,371 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49034 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,371 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49046 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:49058 -> 16.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49058 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49064 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49066 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,435 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49078 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49094 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:49102 -> 16.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49102 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49108 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49110 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49126 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49130 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:49132 -> 16.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49132 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49136 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,438 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49138 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,534 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49150 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49158 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:49170 -> 16.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49170 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49176 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49178 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49192 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,545 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49198 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,595 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:49212 -> 16.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,595 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49212 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,646 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:49226 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:52:10,449 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 16.9.4.3:44000 -> 16.9.4.74:80 [1:9100007:1] ET WEB_SERVER DVWA SQL Injection Attempt Against Level9 Web Server
+2026-07-15 14:52:10,451 [    INFO] Alert: [pri=1 cls=Potential Corporate Privacy Violation] {TCP} 16.9.4.74:80 -> 16.9.4.3:44000 [1:9100008:2] ET POLICY Possible Credential Disclosure From Level9 DVWA SQL Injection
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.254:40628 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.254:40628 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:36,085 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.5.74:57884 -> 16.9.5.62:9200 [1:9100010:1] ET TROJAN Possible Reverse Shell Or Backdoor Activity After Elasticsearch Exploitation
+2026-07-15 14:52:36,085 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.5.74:57884 -> 16.9.5.62:9200 [1:9100009:2] ET EXPLOIT Elasticsearch Groovy Sandbox Escape CVE-2015-1427 Attempt
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.254:55310 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.254:55310 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server

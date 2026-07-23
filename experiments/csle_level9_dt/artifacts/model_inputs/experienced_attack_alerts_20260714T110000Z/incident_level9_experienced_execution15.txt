@@ -1,0 +1,4 @@
+A CSLE level9 experienced attack was executed in true CSLE execution 15.
+The model must infer the attack sequence, tactics, techniques, affected hosts, and confidence from the provided System and Logs.
+The attack resulted in root compromise and persistence on multiple hosts, including Samba, SSH, DVWA/SQL injection, and Elasticsearch CVE-2015-1427 related hosts.
+The final evaluation will compare recovery outputs between true CSLE execution 15 and DT execution 16 to judge whether the model inferred the attack accurately.

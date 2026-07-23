@@ -1,0 +1,157 @@
+Level9 sidecar Snort alerts.
+
+Compressed IDS alerts:
+2026-07-15 14:51:39,048 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.1.191:54382 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,200 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,201 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,201 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,207 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,207 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,209 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,209 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,214 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,214 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,218 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,218 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,226 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,226 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,231 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,231 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,235 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,236 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,236 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,238 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,238 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,240 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,247 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,247 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,248 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,248 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,250 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,250 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,255 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,255 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,262 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,262 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,265 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,265 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:09,280 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:09,280 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:16,256 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:16,256 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:16,263 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:16,263 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51844 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:16,264 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:16,264 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:16,265 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:51:16,265 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.191:51854 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:51:40,327 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:50355 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,351 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49020 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,371 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49034 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,371 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49046 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.2.3:49058 -> 15.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49058 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49064 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,372 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49066 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,435 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49078 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49094 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.2.3:49102 -> 15.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49102 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49108 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,436 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49110 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49126 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49130 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.2.3:49132 -> 15.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49132 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,437 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49136 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,438 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49138 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,534 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49150 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49158 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.2.3:49170 -> 15.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,542 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49170 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49176 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49178 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,543 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49192 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,545 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49198 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,595 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.2.3:49212 -> 15.9.2.78:22 [1:9100003:1] ET POLICY SSH Brute Force Login Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,595 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49212 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:51:40,646 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 15.9.2.3:49226 -> 15.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:34,001 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:34,007 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:34,007 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,974 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,974 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,979 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,979 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,979 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,979 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,987 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,987 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,988 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,988 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,991 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,991 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,992 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,992 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,994 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:35,999 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:52:35,999 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:40628 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:05,925 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:05,931 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:05,931 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,900 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,900 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,904 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,904 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,904 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,904 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,911 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,911 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,913 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,913 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,915 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,915 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,916 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,916 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,918 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,919 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,919 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:53:07,923 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-07-15 14:53:07,923 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.1.254:55310 -> 15.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-07-15 14:52:10,449 [    INFO] Alert: [pri=1 cls=Web Application Attack] {TCP} 15.9.4.3:44000 -> 15.9.4.74:80 [1:9100007:1] ET WEB_SERVER DVWA SQL Injection Attempt Against Level9 Web Server
+2026-07-15 14:52:10,451 [    INFO] Alert: [pri=1 cls=Potential Corporate Privacy Violation] {TCP} 15.9.4.74:80 -> 15.9.4.3:44000 [1:9100008:2] ET POLICY Possible Credential Disclosure From Level9 DVWA SQL Injection
+2026-07-15 14:52:36,085 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 15.9.5.74:57884 -> 15.9.5.62:9200 [1:9100010:1] ET TROJAN Possible Reverse Shell Or Backdoor Activity After Elasticsearch Exploitation
+2026-07-15 14:52:36,085 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 15.9.5.74:57884 -> 15.9.5.62:9200 [1:9100009:2] ET EXPLOIT Elasticsearch Groovy Sandbox Escape CVE-2015-1427 Attempt

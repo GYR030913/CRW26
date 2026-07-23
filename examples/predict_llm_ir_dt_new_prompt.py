@@ -197,10 +197,28 @@ def load_model_and_tokenizer(
     checkpoint_path: str,
     dtype: torch.dtype,
 ) -> tuple[AutoTokenizer, AutoModelForCausalLM]:
+    def resolve_local_hf_snapshot(model_name_or_path: str) -> str:
+        path = Path(model_name_or_path)
+        if path.exists():
+            return str(path)
+        cache_dir = (
+            Path.home()
+            / ".cache"
+            / "huggingface"
+            / "hub"
+            / f"models--{model_name_or_path.replace('/', '--')}"
+        )
+        ref_path = cache_dir / "refs" / "main"
+        if ref_path.exists():
+            snapshot = cache_dir / "snapshots" / ref_path.read_text(encoding="utf-8").strip()
+            if snapshot.exists():
+                return str(snapshot)
+        return model_name_or_path
+
     adapter_config_path = Path(checkpoint_path) / "adapter_config.json"
     if adapter_config_path.exists():
         adapter_meta = json.loads(adapter_config_path.read_text(encoding="utf-8"))
-        base_model_name = str(adapter_meta["base_model_name_or_path"])
+        base_model_name = resolve_local_hf_snapshot(str(adapter_meta["base_model_name_or_path"]))
         tokenizer = AutoTokenizer.from_pretrained(base_model_name, use_fast=True)
         base_model = AutoModelForCausalLM.from_pretrained(
             base_model_name,

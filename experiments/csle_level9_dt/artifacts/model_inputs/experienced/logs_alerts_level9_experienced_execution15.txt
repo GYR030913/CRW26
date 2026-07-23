@@ -1,0 +1,257 @@
+CSLE level9 experienced attack observations.
+
+### Attacker action outputs
+Step 1: Ping Scan (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 2: Sambacry Explolit (status=success, index=1, target_ips=[15.9.2.3])
+Step 3: Network service login (status=success, index=-1, target_ips=[])
+Step 4: Install tools (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 5: Ping Scan (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 6: SSH dictionary attack for username=pw (status=success, index=11, target_ips=[15.9.2.78])
+Step 7: Network service login (status=success, index=-1, target_ips=[])
+Step 8: CVE-2010-0426 exploit (status=success, index=11, target_ips=[15.9.2.78])
+Step 9: Ping Scan (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 10: DVWA SQL Injection Exploit (status=success, index=10, target_ips=[15.9.4.74])
+Step 11: Network service login (status=success, index=-1, target_ips=[])
+Step 12: Install tools (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 13: Ping Scan (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 14: CVE-2015-1427 exploit (status=success, index=10, target_ips=[15.9.5.62])
+Step 15: Network service login (status=success, index=-1, target_ips=[])
+Step 16: Install tools (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+Step 17: Ping Scan (status=success, index=-1, target_ips=[15.9.1.0/24, 15.9.2.0/24, 15.9.3.0/24, 15.9.4.0/24, 15.9.5.0/24, 15.9.6.0/24, 15.9.7.0/24, 15.9.8.0/24, 15.9.9.0/24])
+
+### Final compromised state
+- ips=[15.9.2.3, 15.9.4.3] normalized=[X.9.2.3, X.9.4.3] logged_in=True root=True shell_access=True backdoors=['ssh_backdoor_sambapwned:ssh/22'] credentials=[]
+- ips=[15.9.5.62, 15.9.6.62, 15.9.7.62] normalized=[X.9.5.62, X.9.6.62, X.9.7.62] logged_in=True root=True shell_access=True backdoors=['ssh_backdoor_cve_2015_1427_pwned:ssh/22'] credentials=[]
+- ips=[15.9.4.74, 15.9.5.74] normalized=[X.9.4.74, X.9.5.74] logged_in=True root=True shell_access=True backdoors=['pablo:ssh/22'] credentials=[]
+- ips=[15.9.2.78] normalized=[X.9.2.78] logged_in=True root=True shell_access=True backdoors=[] credentials=[]
+
+### IDS alert summary
+Source: /var/snort/fast.log from csle_router_2_1-level9-15.
+Alert counts by classification and priority:
+- 160 x priority=3 classification=Misc activity
+- 40 x priority=2 classification=Information Leak
+
+Alert message counts:
+- 42 x PROTOCOL-ICMP Echo Reply
+- 41 x PROTOCOL-ICMP PING
+- 40 x PROTOCOL-ICMP PING Unix
+- 40 x PROTOCOL-ICMP Unusual PING detected
+- 28 x PROTOCOL-ICMP destination unreachable port unreachable packet detected
+- 9 x PROTOCOL-ICMP Time-To-Live Exceeded in Transit
+
+Top alert flows:
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.9: PROTOCOL-ICMP PING Unix
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.9: PROTOCOL-ICMP Unusual PING detected
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.9: PROTOCOL-ICMP PING
+- 12 x {ICMP} 15.9.2.9 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.4: PROTOCOL-ICMP PING Unix
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.4: PROTOCOL-ICMP Unusual PING detected
+- 12 x {ICMP} 15.9.1.254 -> 15.9.2.4: PROTOCOL-ICMP PING
+- 12 x {ICMP} 15.9.2.4 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 12 x {ICMP} 15.9.2.79 -> 15.9.1.254: PROTOCOL-ICMP destination unreachable port unreachable packet detected
+- 12 x {ICMP} 15.9.2.21 -> 15.9.1.254: PROTOCOL-ICMP destination unreachable port unreachable packet detected
+- 10 x {ICMP} 15.9.1.254 -> 15.9.2.178: PROTOCOL-ICMP PING Unix
+- 10 x {ICMP} 15.9.1.254 -> 15.9.2.178: PROTOCOL-ICMP Unusual PING detected
+- 10 x {ICMP} 15.9.1.254 -> 15.9.2.178: PROTOCOL-ICMP PING
+- 10 x {ICMP} 15.9.2.178 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 9 x {ICMP} 15.9.1.10 -> 15.9.1.254: PROTOCOL-ICMP Time-To-Live Exceeded in Transit
+- 4 x {ICMP} 15.9.2.21 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 4 x {ICMP} 15.9.2.78 -> 15.9.1.254: PROTOCOL-ICMP destination unreachable port unreachable packet detected
+- 3 x {ICMP} 15.9.1.254 -> 15.9.2.21: PROTOCOL-ICMP PING
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.3: PROTOCOL-ICMP PING Unix
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.3: PROTOCOL-ICMP Unusual PING detected
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.3: PROTOCOL-ICMP PING
+- 2 x {ICMP} 15.9.2.3 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.10: PROTOCOL-ICMP PING Unix
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.10: PROTOCOL-ICMP Unusual PING detected
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.10: PROTOCOL-ICMP PING
+- 2 x {ICMP} 15.9.2.10 -> 15.9.1.254: PROTOCOL-ICMP Echo Reply
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.21: PROTOCOL-ICMP PING Unix
+- 2 x {ICMP} 15.9.1.254 -> 15.9.2.21: PROTOCOL-ICMP Unusual PING detected
+
+Readable Snort fast-alert lines:
+07/13-18:55:58.099459 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:58.099499 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.21 -> 15.9.1.254
+07/13-18:55:58.099502 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.21 -> 15.9.1.254
+07/13-18:55:58.100419 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100419 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100419 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100401 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100401 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100401 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.3
+07/13-18:55:58.100445 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.3 -> 15.9.1.254
+07/13-18:55:58.100449 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.3 -> 15.9.1.254
+07/13-18:55:58.419440 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419440 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419440 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419417 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419417 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419417 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.9
+07/13-18:55:58.419480 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.9 -> 15.9.1.254
+07/13-18:55:58.419485 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.9 -> 15.9.1.254
+07/13-18:55:58.739445 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739445 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739445 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739429 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739429 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739429 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:55:58.739467 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:55:58.739469 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:55:58.995523 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:55:58.995523 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:55:58.995523 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:55:58.995553 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.10 -> 15.9.1.254
+07/13-18:55:59.123420 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123420 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123420 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123405 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123405 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123405 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.21
+07/13-18:55:59.123441 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.21 -> 15.9.1.254
+07/13-18:55:59.123445 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.21 -> 15.9.1.254
+07/13-18:55:59.541215 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:55:59.541363 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.78 -> 15.9.1.254
+07/13-18:55:59.541262 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:55:59.541417 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.78 -> 15.9.1.254
+07/13-18:55:59.541291 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:55:59.541367 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.78 -> 15.9.1.254
+07/13-18:55:59.541420 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.78 -> 15.9.1.254
+07/13-18:56:00.020421 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:56:00.020421 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:56:00.020421 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.10
+07/13-18:56:00.020449 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.10 -> 15.9.1.254
+07/13-18:56:00.040960 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040960 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040960 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040938 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040938 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040938 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:00.040986 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:00.040990 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:00.275615 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275615 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275615 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275594 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275594 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275594 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:00.275638 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:00.275641 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:01.043463 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043463 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043463 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043434 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043434 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043434 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:01.043492 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:01.043496 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:01.299489 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299489 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299489 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299467 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299467 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299467 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:01.299528 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:01.299532 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:02.067447 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067447 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067447 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067430 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067430 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067430 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:02.067474 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:02.067478 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+07/13-18:56:02.323476 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323476 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323476 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323457 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323457 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323457 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.178
+07/13-18:56:02.323498 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:02.323501 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.178 -> 15.9.1.254
+07/13-18:56:02.425236 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:56:02.425333 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425270 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:56:02.425392 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425293 [**] [1:449:9] PROTOCOL-ICMP Time-To-Live Exceeded in Transit [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.10 -> 15.9.1.254
+07/13-18:56:02.425421 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425352 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425449 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425394 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425476 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425423 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425503 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425451 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425478 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:02.425505 [**] [1:402:16] PROTOCOL-ICMP destination unreachable port unreachable packet detected [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.79 -> 15.9.1.254
+07/13-18:56:03.092430 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092430 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092430 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092408 [**] [1:366:11] PROTOCOL-ICMP PING Unix [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092408 [**] [1:29456:3] PROTOCOL-ICMP Unusual PING detected [**] [Classification: Information Leak] [Priority: 2] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092408 [**] [1:384:8] PROTOCOL-ICMP PING [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.1.254 -> 15.9.2.4
+07/13-18:56:03.092457 [**] [1:408:8] PROTOCOL-ICMP Echo Reply [**] [Classification: Misc activity] [Priority: 3] {ICMP} 15.9.2.4 -> 15.9.1.254
+
+### Host/service evidence
+- target_ips=[15.9.2.3, 15.9.4.3] containers=[csle_samba_2_1-level9-15]
+  container=csle_samba_2_1-level9-15
+  users_checked=ssh_backdoor_sambapwned
+  listening_port: Netid   State    Recv-Q   Send-Q     Local Address:Port      Peer Address:Port                                                                                  
+  listening_port: udp     UNCONN   0        0             127.0.0.11:54249          0.0.0.0:*                                                                                     
+  listening_port: udp     UNCONN   0        0            172.19.0.19:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=22))                                                 
+  listening_port: udp     UNCONN   0        0               15.9.2.3:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=21))                                                 
+  listening_port: udp     UNCONN   0        0             15.9.253.3:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=20))                                                 
+  listening_port: udp     UNCONN   0        0               15.9.4.3:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=19))                                                 
+  listening_port: udp     UNCONN   0        0              127.0.0.1:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=18))                                                 
+  listening_port: udp     UNCONN   0        0                0.0.0.0:123            0.0.0.0:*      users:(("ntpd",pid=110,fd=17))                                                 
+  listening_port: udp     UNCONN   0        0                  [::1]:123               [::]:*      users:(("ntpd",pid=110,fd=23))                                                 
+  listening_port: udp     UNCONN   0        0                   [::]:123               [::]:*      users:(("ntpd",pid=110,fd=16))                                                 
+  listening_port: tcp     LISTEN   0        50               0.0.0.0:139            0.0.0.0:*      users:(("smbd",pid=180,fd=31))                                                 
+  listening_port: tcp     LISTEN   0        128              0.0.0.0:22             0.0.0.0:*      users:(("sshd",pid=62,fd=3))                                                   
+  listening_port: tcp     LISTEN   0        50               0.0.0.0:445            0.0.0.0:*      users:(("smbd",pid=180,fd=30))                                                 
+  listening_port: tcp     LISTEN   0        4096          127.0.0.11:37217          0.0.0.0:*                                                                                     
+  listening_port: tcp     LISTEN   0        50                  [::]:139               [::]:*      users:(("smbd",pid=180,fd=29))                                                 
+  listening_port: tcp     LISTEN   0        128                 [::]:22                [::]:*      users:(("sshd",pid=62,fd=4))                                                   
+  listening_port: tcp     LISTEN   0        64                     *:23                   *:*      users:(("xinetd",pid=99,fd=5))                                                 
+  listening_port: tcp     LISTEN   0        50                  [::]:445               [::]:*      users:(("smbd",pid=180,fd=28))
+- target_ips=[15.9.5.62, 15.9.6.62, 15.9.7.62] containers=[csle_cve_2015_1427_1_1-level9-15]
+  container=csle_cve_2015_1427_1_1-level9-15
+  users_checked=ssh_backdoor_cve_2015_1427_pwned
+  listening_port: Netid   State    Recv-Q   Send-Q     Local Address:Port      Peer Address:Port                                                                                  
+  listening_port: udp     UNCONN   0        0              127.0.0.1:161            0.0.0.0:*      users:(("snmpd",pid=81,fd=10))                                                 
+  listening_port: udp     UNCONN   0        0                0.0.0.0:43898          0.0.0.0:*      users:(("snmpd",pid=81,fd=11))                                                 
+  listening_port: udp     UNCONN   0        0             127.0.0.11:56284          0.0.0.0:*                                                                                     
+  listening_port: tcp     LISTEN   0        4096          127.0.0.11:39825          0.0.0.0:*                                                                                     
+  listening_port: tcp     LISTEN   0        128              0.0.0.0:22             0.0.0.0:*      users:(("sshd",pid=8,fd=3))                                                    
+  listening_port: tcp     LISTEN   0        128                 [::]:22                [::]:*      users:(("sshd",pid=8,fd=4))
+- target_ips=[15.9.4.74, 15.9.5.74] containers=[csle_sql_injection_1_1-level9-15]
+  container=csle_sql_injection_1_1-level9-15
+  users_checked=pablo
+  listening_port: Netid   State    Recv-Q   Send-Q     Local Address:Port      Peer Address:Port                                                                                  
+  listening_port: udp     UNCONN   0        0             127.0.0.11:39729          0.0.0.0:*                                                                                     
+  listening_port: tcp     LISTEN   0        4096          127.0.0.11:34471          0.0.0.0:*                                                                                     
+  listening_port: tcp     LISTEN   0        80             127.0.0.1:3306           0.0.0.0:*      users:(("mysqld",pid=216,fd=22))                                               
+  listening_port: tcp     LISTEN   0        511              0.0.0.0:80             0.0.0.0:*      users:(("apache2",pid=347,fd=3),("apache2",pid=346,fd=3),("apache2",pid=344,fd=3),("apache2",pid=343,fd=3),("apache2",pid=342,fd=3),("apache2",pid=334,fd=3))
+  listening_port: tcp     LISTEN   0        128              0.0.0.0:22             0.0.0.0:*      users:(("sshd",pid=7,fd=3))                                                    
+  listening_port: tcp     LISTEN   0        128                 [::]:22                [::]:*      users:(("sshd",pid=7,fd=4))
+- target_ips=[15.9.2.78] containers=[csle_ssh_1_1-level9-15]
+  container=csle_ssh_1_1-level9-15
+  listening_port: Netid   State    Recv-Q   Send-Q     Local Address:Port      Peer Address:Port  Process                                                                         
+  listening_port: udp     UNCONN   0        0             127.0.0.11:52608          0.0.0.0:*                                                                                     
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=222))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=223))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=221))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=220))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=214))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=219))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=218))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=217))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=216))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=215))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=213))                                                
+  listening_port: udp     UNCONN   0        0            15.9.253.78:53             0.0.0.0:*      users:(("named",pid=67,fd=212))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=198))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=190))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=199))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=197))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=196))                                                
+  listening_port: udp     UNCONN   0        0              15.9.3.78:53             0.0.0.0:*      users:(("named",pid=67,fd=195))

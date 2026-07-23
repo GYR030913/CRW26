@@ -133,6 +133,7 @@ class CandidateEvaluation:
     baseline_restore_time_seconds: float
     wall_clock_time_seconds: float
     action_results: tuple[ActionExecutionResult, ...]
+    baseline_validation: dict[str, Any] = field(default_factory=dict)
     first_action_plan: CommandPlan | None = None
     invalid_reason: str = ""
     rollout_index: int = 1

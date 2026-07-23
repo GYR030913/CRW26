@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "details": {
+        "dt_count": 35,
+        "expected_per_execution": 35,
+        "true_count": 35
+      },
+      "name": "container_counts",
+      "ok": true
+    },
+    {
+      "details": {
+        "missing": []
+      },
+      "name": "key_role_containers_exist",
+      "ok": true
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "name": "key_ip_mapping",
+      "ok": true
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "name": "key_users_exist",
+      "ok": true
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "name": "key_services_listening",
+      "ok": true
+    },
+    {
+      "details": {
+        "mismatches": []
+      },
+      "name": "attacker_key_port_reachability",
+      "ok": true
+    }
+  ],
+  "dt_execution_id": 16,
+  "ready_for_attack_replay": true,
+  "true_execution_id": 15
+}

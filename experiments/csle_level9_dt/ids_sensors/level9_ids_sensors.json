@@ -1,0 +1,56 @@
+{
+  "description": "Passive IDS capture points for CSLE level9 lateral movement experiments. These sensors preserve the original level9 topology and capture traffic for later Snort replay.",
+  "emulation_name": "csle-level9-0.10.0",
+  "execution_id_default": 15,
+  "router_sensor": {
+    "container": "csle_router_2_1-level9-{execution_id}",
+    "role": "existing Snort IDS on the router path",
+    "covered_paths": [
+      "15.9.1.0/24 <-> 15.9.2.0/24",
+      "15.9.253.0/24 management/collector network"
+    ],
+    "snort_interface_pair": "eth3:eth0"
+  },
+  "passive_capture_sensors": [
+    {
+      "id": "ids-2-samba",
+      "subnet": "15.9.2.0/24",
+      "sidecar_container_template": "csle_samba_2_1-level9-{execution_id}",
+      "sidecar_interface": "eth0",
+      "reason": "Captures attacker-to-Samba traffic on the target-side interface, especially SambaCry/SMB traffic to 15.9.2.3:445."
+    },
+    {
+      "id": "ids-4",
+      "subnet": "15.9.4.0/24",
+      "sidecar_container_template": "csle_samba_2_1-level9-{execution_id}",
+      "sidecar_interface": "eth2",
+      "reason": "Captures Samba-to-DVWA lateral movement, especially 15.9.4.3 -> 15.9.4.74 SQL injection traffic."
+    },
+    {
+      "id": "ids-5",
+      "subnet": "15.9.5.0/24",
+      "sidecar_container_template": "csle_sql_injection_1_1-level9-{execution_id}",
+      "sidecar_interface": "eth2",
+      "reason": "Captures DVWA-to-Elasticsearch lateral movement, especially 15.9.5.74 -> 15.9.5.62 CVE-2015-1427 traffic."
+    },
+    {
+      "id": "ids-6",
+      "subnet": "15.9.6.0/24",
+      "sidecar_container_template": "csle_cve_2015_1427_1_1-level9-{execution_id}",
+      "sidecar_interface": "eth3",
+      "reason": "Captures Elasticsearch lateral exposure and expert sequence traffic toward 15.9.6.7."
+    },
+    {
+      "id": "ids-7",
+      "subnet": "15.9.7.0/24",
+      "sidecar_container_template": "csle_cve_2015_1427_1_1-level9-{execution_id}",
+      "sidecar_interface": "eth4",
+      "reason": "Captures Elasticsearch multi-homed exposure and post-CVE traffic on the 15.9.7 subnet."
+    }
+  ],
+  "notes": [
+    "This first implementation is sidecar passive capture plus offline Snort replay, not an inline bridge.",
+    "It does not change the original CSLE level9 attack path or container topology.",
+    "It should be replaced by true OVS mirror sensors later if we need production-grade live IDS visibility."
+  ]
+}

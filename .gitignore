@@ -199,3 +199,20 @@ logs/
 /outputs_*.txt
 /llm_ir_dt_new/outputs_*.json
 /llm_ir_dt_new/all_server_states_after_shellshock_recovery.json
+
+# CSLE level9 migration: keep local clone, envs, models, and generated run data out of git.
+/external/csle/
+!/external/
+!/external/csle_patches/
+!/external/csle_patches/**
+/experiments/csle_level9_dt/**/__pycache__/
+/experiments/csle_level9_dt/artifacts/*
+!/experiments/csle_level9_dt/artifacts/model_inputs/
+!/experiments/csle_level9_dt/artifacts/model_inputs/**
+!/experiments/csle_level9_dt/artifacts/snort_rules/
+!/experiments/csle_level9_dt/artifacts/snort_rules/**
+/experiments/csle_level9_dt/artifacts/**/*.pcap
+/experiments/csle_level9_dt/artifacts/recovery_baselines/
+/experiments/csle_level9_dt/artifacts/model_outputs/
+/experiments/csle_level9_dt/artifacts/baseline_validation/
+/experiments/csle_level9_dt/artifacts/ids_sensors/

