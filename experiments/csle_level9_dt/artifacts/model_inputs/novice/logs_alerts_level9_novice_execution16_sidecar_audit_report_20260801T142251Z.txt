@@ -1,0 +1,48 @@
+session=experiments/csle_level9_dt/artifacts/ids_sensors/level9_16_novice_20260801T142251Z_20260801T142251Z
+raw_replay_alerts=8828
+candidate_after_sid_and_client_filter=1092
+selected_after_max_per_flow=39
+dropped_by_max_per_flow=1053
+
+selected_sid_counts:
+  9100005: 6 ET POLICY SMB Traffic To Level9 Samba Server
+  9100006: 6 ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+  9100019: 6 ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+  9100021: 4 ET TROJAN SSH Backdoor Login To Level9 Samba Host
+  9100022: 6 ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+  9100023: 1 ET POLICY Telnet Brute Force Login Attempt Against Level9 Samba Host
+  9100028: 2 ET POLICY FTP Connection Attempt Against Level9 FTP Server
+  9100031: 2 ET WEB_SERVER HTTP Traffic To Level9 Shellshock Target
+  9100033: 6 ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+
+drop_counts:
+  excluded_sid_9100001: 2116
+  client_254_background: 1684
+  excluded_sid_384: 1035
+  excluded_sid_469: 1020
+  excluded_sid_453: 1020
+  excluded_sid_9100020: 105
+  excluded_sid_249: 78
+  excluded_sid_1421: 78
+  excluded_sid_1418: 78
+  excluded_sid_1420: 78
+  excluded_sid_618: 78
+  excluded_sid_615: 78
+  excluded_sid_1620: 53
+  excluded_sid_620: 42
+  excluded_sid_408: 23
+  excluded_sid_9100025: 19
+  excluded_sid_9100024: 19
+  excluded_sid_402: 18
+  excluded_sid_366: 15
+  excluded_sid_29456: 15
+  excluded_sid_716: 13
+  excluded_sid_9100026: 13
+  excluded_sid_399: 12
+  excluded_sid_451: 8
+  excluded_sid_9100004: 6
+  excluded_sid_1417: 5
+  excluded_sid_100000241: 5
+  excluded_sid_1251: 4
+  excluded_sid_718: 4
+  excluded_sid_1325: 3

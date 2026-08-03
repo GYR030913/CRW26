@@ -1,0 +1,40 @@
+Compressed IDS alerts:
+2026-08-01 16:23:43,609 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:42876 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:23:43,609 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:23:43,610 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:23:43,611 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:23:43,611 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:23:43,612 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:42876 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:25:34,950 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:50116 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:25:34,968 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:56158 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:25:44,053 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:47598 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:25:44,053 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:47610 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:25:44,053 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:47612 -> 16.9.2.3:23 [1:9100023:1] ET POLICY Telnet Brute Force Login Attempt Against Level9 Samba Host
+2026-08-01 16:25:44,053 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.1.191:47612 -> 16.9.2.3:23 [1:9100022:1] ET POLICY Telnet Connection Attempt Against Level9 Samba Host
+2026-08-01 16:26:11,474 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:49316 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:26:52,586 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:26:52,586 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:26:52,588 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:44986 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:26:52,589 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:26:52,589 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:29:11,316 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:54401 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:29:11,316 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:54401 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:29:11,318 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:54401 -> 16.9.2.79:21 [1:9100028:1] ET POLICY FTP Connection Attempt Against Level9 FTP Server
+2026-08-01 16:29:11,320 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 16.9.2.3:54401 -> 16.9.2.79:80 [1:9100031:1] ET WEB_SERVER HTTP Traffic To Level9 Shellshock Target
+2026-08-01 16:33:16,912 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:61253 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:33:16,912 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:61253 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:33:16,927 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:34458 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:33:16,927 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:34458 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:34468 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:34468 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:34480 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:34480 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.2.3:34482 -> 16.9.2.178:22 [1:9100033:1] ET EXPLOIT CVE-2010-0426 Privilege Escalation Follow-up SSH Activity
+2026-08-01 16:33:16,947 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:34482 -> 16.9.2.178:22 [1:9100019:1] ET POLICY SSH Connection Attempt Against Level9 Secondary SSH Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:34:15,369 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:42878 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:36:31,664 [    INFO] Alert: [pri=2 cls=access to a potentially vulnerable web application] {TCP} 16.9.2.3:61922 -> 16.9.2.79:80 [1:9100031:1] ET WEB_SERVER HTTP Traffic To Level9 Shellshock Target
+2026-08-01 16:36:31,664 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:61922 -> 16.9.2.79:21 [1:9100028:1] ET POLICY FTP Connection Attempt Against Level9 FTP Server

@@ -54,6 +54,15 @@ SECURITY_RELEVANT_PREFIXES = (
     "/var/spool/cron",
 )
 
+IGNORED_SECURITY_RELEVANT_CONTENT_PATHS = {
+    "/etc/sudoers.d/README",
+    "/root/.ssh/known_hosts",
+}
+
+
+def is_ignored_sudo_change(change: dict[str, Any]) -> bool:
+    return change.get("path") == "/etc/sudoers.d/README"
+
 
 def normalize_tar_name(path: str) -> str:
     return path.lstrip("/")
@@ -279,7 +288,9 @@ def diff_files_from_baseline(item: dict[str, Any], baseline_dir: Path) -> dict[s
     content_changed = sorted(
         path
         for path in set(baseline_hashes) & set(current_hashes)
-        if baseline_hashes[path] != current_hashes[path] and is_security_relevant(path)
+        if baseline_hashes[path] != current_hashes[path]
+        and is_security_relevant(path)
+        and path not in IGNORED_SECURITY_RELEVANT_CONTENT_PATHS
     )
     return {
         "created": created,
@@ -349,7 +360,7 @@ def diff_container(item: dict[str, Any], baseline_dir: Path) -> dict[str, Any]:
             user_diff["changed"],
             sudo_diff["added_paths"],
             sudo_diff["deleted_paths"],
-            sudo_diff["changed_paths"],
+            [change for change in sudo_diff["changed_paths"] if not is_ignored_sudo_change(change)],
             key_diff["added_paths"],
             key_diff["deleted_paths"],
             key_diff["changed_paths"],

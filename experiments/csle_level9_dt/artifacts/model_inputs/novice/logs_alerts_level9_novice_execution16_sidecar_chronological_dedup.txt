@@ -1,0 +1,16 @@
+Compressed IDS alerts:
+2026-08-01 16:23:43,609 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:23:43,609 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:42876 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-08-01 16:23:43,611 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42876 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:23:43,612 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:42876 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:26:11,474 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:49316 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:26:52,586 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:26:52,588 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:44986 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:26:52,589 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:44986 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:26:52,589 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:44986 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-08-01 16:29:11,316 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:54401 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:139 [1:9100006:1] ET POLICY SMB NetBIOS Traffic To Level9 Samba Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=3 cls=Generic Protocol Command Decode] {TCP} 16.9.1.191:42878 -> 16.9.2.3:445 [1:9100005:1] ET POLICY SMB Traffic To Level9 Samba Server
+2026-08-01 16:34:15,366 [    INFO] Alert: [pri=1 cls=Attempted Administrator Privilege Gain] {TCP} 16.9.1.191:42878 -> 16.9.2.3:445 [1:9100004:1] ET EXPLOIT SambaCry Remote Code Execution Attempt Against Level9 Samba Server
+2026-08-01 16:34:15,369 [    INFO] Alert: [pri=1 cls=A Network Trojan was detected] {TCP} 16.9.1.191:42878 -> 16.9.2.3:22 [1:9100021:1] ET TROJAN SSH Backdoor Login To Level9 Samba Host
+2026-08-01 16:36:31,663 [    INFO] Alert: [pri=1 cls=Attempted User Privilege Gain] {TCP} 16.9.2.3:61922 -> 16.9.2.78:22 [1:9100002:2] ET POLICY SSH Connection Attempt Against Level9 SSH Server

@@ -1,0 +1,220 @@
+{
+  "schema_version": 2,
+  "name": "csle_level9_compact_attacker_action_space",
+  "description": "Compact manifest for predicting a CSLE executable level9 attacker action sequence. The model should select high-level CSLE actions, not shell commands.",
+  "output_schema": {
+    "sequence_name": "string",
+    "prediction_basis": "string",
+    "actions": [
+      {
+        "action": "allowed action name",
+        "target": "valid target alias",
+        "reason": "short evidence-based reason"
+      }
+    ]
+  },
+  "allowed_actions": [
+    {
+      "action": "PING_SCAN",
+      "targets": [
+        "all"
+      ],
+      "role": "Refresh reachable hosts before a new attack stage."
+    },
+    {
+      "action": "TCP_SYN_STEALTH_SCAN",
+      "targets": [
+        "all",
+        "samba",
+        "ssh",
+        "dvwa",
+        "elasticsearch"
+      ],
+      "role": "Optional port discovery when port scan evidence exists."
+    },
+    {
+      "action": "VULSCAN",
+      "targets": [
+        "all",
+        "samba",
+        "ssh",
+        "dvwa",
+        "elasticsearch"
+      ],
+      "role": "Optional vulnerability scan when vulnerability-scan evidence exists."
+    },
+    {
+      "action": "NMAP_VULNERS",
+      "targets": [
+        "all",
+        "samba",
+        "ssh",
+        "dvwa",
+        "elasticsearch"
+      ],
+      "role": "Optional Nmap vulners scan when vulners evidence exists."
+    },
+    {
+      "action": "SAMBACRY_EXPLOIT",
+      "targets": [
+        "samba"
+      ],
+      "role": "Core exploit for SambaCry; should usually be followed by SERVICE_LOGIN."
+    },
+    {
+      "action": "SSH_SAME_USER_PASS_DICTIONARY",
+      "targets": [
+        "ssh"
+      ],
+      "role": "Core SSH password guessing; should usually be followed by SERVICE_LOGIN."
+    },
+    {
+      "action": "CVE_2010_0426_PRIV_ESC",
+      "targets": [
+        "ssh"
+      ],
+      "role": "Local privilege escalation after SSH login when privilege escalation is inferred."
+    },
+    {
+      "action": "DVWA_SQL_INJECTION",
+      "targets": [
+        "dvwa"
+      ],
+      "role": "Core DVWA SQL injection; should usually be followed by SERVICE_LOGIN."
+    },
+    {
+      "action": "CVE_2015_1427_EXPLOIT",
+      "targets": [
+        "elasticsearch"
+      ],
+      "role": "Core Elasticsearch CVE-2015-1427 exploit; should usually be followed by SERVICE_LOGIN."
+    },
+    {
+      "action": "SERVICE_LOGIN",
+      "targets": [
+        "all"
+      ],
+      "role": "CSLE state update action. Required after credential/backdoor-producing actions to update logged_in/root and active connections."
+    },
+    {
+      "action": "INSTALL_TOOLS",
+      "targets": [
+        "all"
+      ],
+      "role": "CSLE pivot preparation action. Use after SERVICE_LOGIN before using a compromised host as a later jump host."
+    },
+    {
+      "action": "SSH_BACKDOOR",
+      "targets": [
+        "all",
+        "samba",
+        "ssh",
+        "dvwa",
+        "elasticsearch"
+      ],
+      "role": "Optional backdoor install only if backdoor installation is inferred."
+    },
+    {
+      "action": "TELNET_SAME_USER_PASS_DICTIONARY",
+      "targets": [
+        "samba",
+        "ssh",
+        "dvwa",
+        "elasticsearch"
+      ],
+      "role": "Use only if Telnet password guessing is inferred."
+    },
+    {
+      "action": "FTP_SAME_USER_PASS_DICTIONARY",
+      "targets": [
+        "dvwa"
+      ],
+      "role": "Use only if FTP password guessing is inferred."
+    },
+    {
+      "action": "SHELLSHOCK_EXPLOIT",
+      "targets": [
+        "dvwa"
+      ],
+      "role": "Use only if ShellShock exploitation is inferred."
+    },
+    {
+      "action": "CVE_2015_3306_EXPLOIT",
+      "targets": [
+        "ftp"
+      ],
+      "role": "Use only if ProFTPD CVE-2015-3306 exploitation is inferred."
+    },
+    {
+      "action": "CVE_2016_10033_EXPLOIT",
+      "targets": [
+        "mail"
+      ],
+      "role": "Use only if PHPMailer CVE-2016-10033 exploitation is inferred."
+    },
+    {
+      "action": "CVE_2015_5602_PRIV_ESC",
+      "targets": [
+        "ssh"
+      ],
+      "role": "Use only if CVE-2015-5602 local privilege escalation is inferred."
+    }
+  ],
+  "valid_target_aliases": [
+    "all",
+    "samba",
+    "ssh",
+    "dvwa",
+    "elasticsearch",
+    "ftp",
+    "mail"
+  ],
+  "alias_to_level9_hosts": {
+    "samba": [
+      "16.9.2.3",
+      "16.9.4.3",
+      "16.9.253.3"
+    ],
+    "ssh": [
+      "16.9.2.78",
+      "16.9.3.78",
+      "16.9.253.78"
+    ],
+    "dvwa": [
+      "16.9.4.74",
+      "16.9.5.74",
+      "16.9.253.74"
+    ],
+    "elasticsearch": [
+      "16.9.5.62",
+      "16.9.6.62",
+      "16.9.7.62",
+      "16.9.253.62"
+    ],
+    "ftp": [
+      "16.9.2.79",
+      "16.9.253.79"
+    ],
+    "mail": [
+      "16.9.2.178",
+      "16.9.253.178"
+    ]
+  },
+  "csle_runtime_patterns": [
+    "Before a major new exploit stage, add PING_SCAN(all) if reachability must be discovered/refreshed.",
+    "After SAMBACRY_EXPLOIT(samba), add SERVICE_LOGIN(all), and add INSTALL_TOOLS(all) if Samba is used as a pivot.",
+    "After SSH_SAME_USER_PASS_DICTIONARY(ssh), add SERVICE_LOGIN(all); if privilege escalation is inferred, add CVE_2010_0426_PRIV_ESC(ssh).",
+    "Before DVWA_SQL_INJECTION(dvwa), the sequence should already have a usable pivot: SERVICE_LOGIN(all) and usually INSTALL_TOOLS(all).",
+    "After DVWA_SQL_INJECTION(dvwa), add SERVICE_LOGIN(all), and add INSTALL_TOOLS(all) if DVWA is used as a pivot.",
+    "Before CVE_2015_1427_EXPLOIT(elasticsearch), the sequence should already have a usable pivot: SERVICE_LOGIN(all) and usually INSTALL_TOOLS(all).",
+    "After CVE_2015_1427_EXPLOIT(elasticsearch), add SERVICE_LOGIN(all); add INSTALL_TOOLS(all) if later actions continue."
+  ],
+  "selection_rules": [
+    "Choose only action values from allowed_actions.action.",
+    "Choose only target aliases allowed for that action.",
+    "Do not use service names such as SSH, DVWA, or ELASTICSEARCH as action values. They are targets: ssh, dvwa, elasticsearch.",
+    "Output a CSLE executable sequence, not only a semantic list of exploits.",
+    "Do not output Docker commands, shell commands, exploit script paths, or recovery actions.",
+    "Return JSON only."
+  ]
+}
